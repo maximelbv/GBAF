@@ -1,0 +1,12 @@
+body {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulaire_inscription {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
