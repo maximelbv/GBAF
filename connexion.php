@@ -2,17 +2,17 @@
 
         include('./include/_bdd_call.php');
 
-        // PHP FORMULAIRE CONNEXION 
+        if (isset($_POST['pseudo'],$_POST['mdp'])) {                                                              
+            $reponse = $bdd->query('SELECT * FROM utilisateurs WHERE username="'.$_POST["pseudo"].'"')->fetchAll()[0]; 
+            $isPasswordCorrect = password_verify($_POST['mdp'], $reponse['password']);                            
 
-        if (isset($_POST['pseudo'],$_POST['mdp'])) {                                                              // SI les pseudos et mdp sont dans le formulaire : 
-            $reponse = $bdd->query('SELECT * FROM utilisateurs where username="'.$_POST["pseudo"].'"')->fetch();  // va chercher les valeurs d username en bdd et mets les dans $reponse 
-            $isPasswordCorrect = password_verify($_POST['mdp'], $reponse['password']);                            // initialise la verification de password et mets là dans $isPasswordCorrect
-
-            if ($_POST['pseudo'] == $reponse['username'] && $isPasswordCorrect) {                                 // SI le pseudo entré correspond à un pseudo dans la bdd ET SI le mdp correspond
-                    session_start();                                                                              // débute la session 
-                    $_SESSION['username'] = $reponse['username'];                                                 // définit l'username en tant que username de session
-                    header('Location: index.php');                                                                // renvoie vers l'index
-
+            if ($_POST['pseudo'] == $reponse['username'] && $isPasswordCorrect) {                               
+                    session_start();                                                                   
+                    $_SESSION['username'] = $reponse['username'];   
+                    $_SESSION['prenom'] = $reponse['prenom'];
+                    $_SESSION['nom'] = $reponse['nom'];                                              
+                    print_r($_SESSION);
+                    header('LOCATION: index.php');                                                                
                 } else {                                                                                          
                     echo "Mauvais identifiant ou mot de passe";
                 }
@@ -22,22 +22,27 @@
 
         if (isset($_POST['nom']) && !empty($_POST['nom']) && isset($_POST['prenom']) && !empty($_POST['prenom']) && isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['password']) &&!empty($_POST['password']) && isset($_POST['reponse_secrete']) && !empty($_POST['reponse_secrete'])) {
         
-        // SI tout les champs sont remplis et non vides (possible de réduire la condition?)   
+        // SI tout les champs sont remplis et non vides (possible de réduire la condition?)
 
-            $pass_hash = password_hash($_POST['password'], PASSWORD_DEFAULT);                                                                                 // hash le password  
-            $reponse = $bdd->prepare('INSERT INTO utilisateurs(nom,prenom,username,password,question_secrete,reponse_secrete) VALUES(?,?,?,?,?,?)');          // va chercher les données de la bdd et demande leur valeur via $reponse
-            $reponse->execute(array($_POST['nom'], $_POST['prenom'], $_POST['username'], $pass_hash, $_POST['question_secrete'], $_POST['reponse_secrete'])); // execute les entrées du formulaire en tant que valeurs pour les données demandées dans $reponse et inclut les dans la bdd
-            
-        } 
+            $reponse = $bdd->query('SELECT * FROM utilisateurs WHERE username="'.$_POST["username"].'"')->fetchAll(); 
+            if (count($reponse) == 0) {
+                $pass_hash = password_hash($_POST['password'], PASSWORD_DEFAULT);                                                                                 // hash le password  
+                $reponse = $bdd->prepare('INSERT INTO utilisateurs(nom,prenom,username,password,question_secrete,reponse_secrete) VALUES(?,?,?,?,?,?)');          // va chercher les données de la bdd et demande leur valeur via $reponse
+                $reponse->execute(array($_POST['nom'], $_POST['prenom'], $_POST['username'], $pass_hash, $_POST['question_secrete'], $_POST['reponse_secrete'])); // execute les entrées du formulaire en tant que valeurs pour les données demandées dans $reponse et inclut les dans la bdd            
+            } else {
+                echo 'identifiant déjà utilisé';
+            }
+
+        }  
     ?>
     
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/style_form.css">
+        <link rel="stylesheet" href="css/style.css">
         <title>Connexion</title>
     </head>
 
@@ -49,9 +54,9 @@
             <fieldset class="formulaire_inscription">
                 <legend>Connexion</legend>
                 <label for="pseudo">User name : </label>
-                <input type="text" name="pseudo">
+                <input type="text" name="pseudo" autocomplete="off">
                 <label for="mdp">Mot de passe : </label>
-                <input type="text" name="mdp">
+                <input type="text" name="mdp" autocomplete="off">
                 <input type="submit">
             </fieldset>
         </form>

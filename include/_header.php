@@ -1,5 +1,7 @@
     
-    <?php include('include/_session_start.php')?>
+    <?php 
+        session_start(); 
+    ?>
     
     <header>
         <a href="index.php"><img  id="logo_gbaf" src="media/logo_gbaf.png" alt="logo_gbaf" width="70px" height="85px"></a>
