@@ -26,7 +26,7 @@ This project is the last exercise of my training. It aims to train me in PHP and
 <h3>General</h3>
 
 ✅ HTML5 / CSS3 structure </br>
-⬛ Responsive </br>
+✅ Responsive </br>
 ✅ PHP / SQL for interactions between the site and the database.</br></br>
 
 <h3>Login / Logout</h3>
@@ -83,7 +83,7 @@ This project is the last exercise of my training. It aims to train me in PHP and
 ✅ Register form : error if username already in use</br>
 ✅ Login form : Login if the ids match</br>
 ✅ Login form : Redirection to the header with the session started</br>
-⬛ Media queries for the index page</br>
+✅ Media queries for the index page</br>
 ⬛ Register form : REGEX</br>
 ⬛ Styling the login and register pages</br>
 ⬛ Password lost page</br>
@@ -117,9 +117,9 @@ Learning for this project :</br>
 
 <h2>Specifications and support</h2></br>
 
-⬛W3C validated</br>
-⬛Responsive</br>
-⬛Tested on Google Chrome, Firefox, Opera</br>
+⬛ W3C validated</br>
+✅ Responsive</br>
+⬛ Tested on Google Chrome, Firefox, Opera</br>
 Most of the lines in the code are commented, if you have a question, contact me at maximelefebvre60230@gmail.com</br>
 
 <h2>Status</h2>
