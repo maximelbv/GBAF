@@ -35,12 +35,12 @@ This project is the last exercise of my training. It aims to train me in PHP and
 ⬛ The user can modify their personal information at any time via the "Account settings" page.</br>
 ✅ Required fields on the registration page:</br>
     <ul>
-        <li>○ Name</li>
-        <li>○ First name</li>
-        <li>○ UserName</li>
-        <li>○ Password</li>
-        <li>○ Secret question</li>
-        <li>○ Answer to the secret question</li>
+        <li> Name</li>
+        <li> First name</li>
+        <li> UserName</li>
+        <li> Password</li>
+        <li> Secret question</li>
+        <li> Answer to the secret question</li>
     </ul> </br>
 ⬛ If the user forgets his password, he can enter his UserName and answer the secret question to create a new one.</br>
 ✅ When the user is logged in, his name and first name are indicated in the header on all pages.</br>
@@ -52,25 +52,25 @@ This project is the last exercise of my training. It aims to train me in PHP and
 ✅ brief presentation of GBAF.</br>
 ✅ list of the different actors / partners of the French banking system including:</br>
     <ul>
-        <li>○ logo</li>
-        <li>○ title</li>
-        <li>○ company presentation with display of the first line of
+        <li> logo</li>
+        <li> title</li>
+        <li> Company presentation with display of the first line of
         text.</li>
-        <li>○ "Show more" button (to open a new page
+        <li> "Show more" button (to open a new page
         for each actor / partner).</li>
     </ul>
 ⬛ Details of the partner page including:</br>
     <ul>
-        <li>● logo.</li>
-        <li>● title</li>
-        <li>● full description text</li>
-        <li>● Like / Dislike button used to give an opinion (professional and constructive) with one click on the actor / partner.</li>
-        <li>● indication of the number of Like / Dislike.</li>
-        <li>● button to post a new comment.</li>
-        <li>● list of comments on this actor / partner including the first name of the user who left the comment, the date and the text</li>
+        <li> logo.</li>
+        <li> title</li>
+        <li> full description text</li>
+        <li> Like / Dislike button used to give an opinion (professional and constructive) with one click on the actor / partner.</li>
+        <li> indication of the number of Like / Dislike.</li>
+        <li> button to post a new comment.</li>
+        <li> list of comments on this actor / partner including the first name of the user who left the comment, the date and the text</li>
     </ul></br>
 
-Roadmap (sorted chonologically): 
+<h2>Roadmap (sorted chonologically) </h2>
 
 ✅ HTML / CSS structure </br>
 ✅ actors database</br>
@@ -95,14 +95,14 @@ Roadmap (sorted chonologically):
 
 
 
-Graphical charter</br>
+<h2>Graphical charter</h2></br>
 
 Wireframe and zoning: provided by our web designer.</br>
 Logo: provided by our web designer.</br>
 Colorimetry: red and white. According to the GBAF logo.</br>
 Fonts : Poppins</br></br>
 
-Ressources used : </br>
+<h2>Ressources used</h2> </br>
 
 Editor : Visual Studio Code </br>
 Server : Apache 2.4.27, WAMP local</br>
@@ -113,11 +113,12 @@ Learning for this project :</br>
     - https://www.php.net/docs.php</br>
     - https://dev.mysql.com/doc/</br>
 
-Specifications and support</br>
+<h2>Specifications and support</h2></br>
 
 W3C validated</br>
 Responsive</br>
 Tested on Google Chrome, Firefox, Opera</br>
 Most of the lines in the code are commented, if you have a question, contact me at maximelefebvre60230@gmail.com</br>
 
-Status : in developpment.
+<h2>Status</h2>
+in developpment.
