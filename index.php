@@ -50,11 +50,11 @@
         <div class="txt_partenaires">
 
             <h2>
-                Découvrez les acteurs et pârtenaires du GBAF <a href="#acteurs">
+                Découvrez les acteurs et pârtenaires du GBAF 
             </h2>
-            <img id='arrow' src="media/arrow.png" alt=""></a>
+            <a href="#acteur"><img id='arrow' src="media/arrow.png" alt=""></a>
         </div>
-        <ul class="acteur">
+        <ul id="acteur">
     <?php 
         $reponse = $bdd->query('SELECT * FROM acteurs');
         while ($donnees = $reponse->fetch()) :   
@@ -64,7 +64,12 @@
                     <img  id="logo" src="<?php echo $donnees['logo'] ?>" alt="">
                     <div class='nomDesc'>
                         <h3><?php echo $donnees['nom'] ?></h3>
-                        <p><?php echo $donnees['description'] ?></p>
+                        <p><?php 
+                                $apercu = substr($donnees['description'], 0, 150);
+                                echo $apercu . '...';
+                            
+
+                            ?></p>
                     </div>
                     <a id='lirelasuite' href="acteur.php?id=<?php echo $donnees['identifiant']?>">lire la suite</a>
                 </li>
