@@ -61,16 +61,21 @@
     ?>
             
                 <li class='informations'>
-                    <img  id="logo" src="<?php echo $donnees['logo'] ?>" alt="">
-                    <div class='nomDesc'>
-                        <h3><?php echo $donnees['nom'] ?></h3>
-                        <p><?php 
-                                $apercu = substr($donnees['description'], 0, 150);
-                                echo $apercu . '...';
+                    
+                    <div class="nomDescLogo">
+                        <img  id="logo" src="<?php echo $donnees['logo'] ?>" alt="">
+                        <div class='nomDesc'>
                             
+                            <h3><?php echo $donnees['nom'] ?></h3>
+                            <p><?php 
+                                    $apercu = substr($donnees['description'], 0, 150);
+                                    echo $apercu . '...';
+                                
 
-                            ?></p>
+                                ?></p>
+                        </div>
                     </div>
+
                     <a id='lirelasuite' href="acteur.php?id=<?php echo $donnees['identifiant']?>">lire la suite</a>
                 </li>
                 
