@@ -42,6 +42,11 @@
 
         <img class="img_presentation" src="media/teamwork.png" alt="">
         
+        
+    </section>
+
+    <section id="acteurs">
+
         <div class="txt_partenaires">
 
             <h2>
@@ -49,29 +54,27 @@
             </h2>
             <img id='arrow' src="media/arrow.png" alt=""></a>
         </div>
-    </section>
-
-    <section id="acteurs">
-
+        <ul class="acteur">
     <?php 
         $reponse = $bdd->query('SELECT * FROM acteurs');
         while ($donnees = $reponse->fetch()) :   
     ?>
-            <ul class="acteur">
-                <div class='informations'>
+            
+                <li class='informations'>
                     <img  id="logo" src="<?php echo $donnees['logo'] ?>" alt="">
                     <div class='nomDesc'>
                         <h3><?php echo $donnees['nom'] ?></h3>
                         <p><?php echo $donnees['description'] ?></p>
                     </div>
-                </div>
-                <a id='lirelasuite' href="acteur.php?id=<?php echo $donnees['identifiant']?>">lire la suite</a>
-            </ul>
+                    <a id='lirelasuite' href="acteur.php?id=<?php echo $donnees['identifiant']?>">lire la suite</a>
+                </li>
+                
+            
 
         <?php 
         endwhile;
         ?>
-
+        </ul>
     </section>
     
     <?php include("./include/_footer.php"); ?>

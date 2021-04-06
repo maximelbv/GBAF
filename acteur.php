@@ -16,23 +16,23 @@
             $reponse = $bdd->prepare('SELECT * FROM acteurs WHERE identifiant=?');
             $reponse->execute(array($_GET['id']));
             
-            while ($donnees = $reponse->fetch()) :
-    ?>          <div class="presentation_page_acteur">
+            $donnees = $reponse->fetch();?>          
+            
+            <article class="presentation_page_acteur">
+
                     <img class="logo_page_acteur" src="<?php echo $donnees['logo'] ?>" alt="">
                     <h2 class="nom_acteur"><?php echo $donnees['nom'] ?></h2>
                     <a href="">Lien</a>
                     <p><?php echo $donnees['description'] ?></p>
-                </div>
-            <?php
-            endwhile
-            ?>
+                </article>
+            
          
     <section class="commentaires">  
 
         <div class="header_com">
             <p>X commentaires</p>
             <input type="button" value="Nouveau commentaire">
-
+        </div>
     </section>
 
     <?php include("./include/_footer.php"); ?>
