@@ -1,4 +1,4 @@
-GBAF(Groupement Banque Assurance Français)
+<h1>GBAF(Groupement Banque Assurance Français)</h1>
 
 Description
 
