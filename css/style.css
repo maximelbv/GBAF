@@ -84,11 +84,6 @@ header {
     padding: 0px;
 }
 
-.informations img {
-    
-    
-}
-
 #logo {
     align-self: center;
     justify-self: center;
@@ -182,4 +177,14 @@ footer a {
 .logo_page_acteur {
     align-self: center;
     margin-bottom: 50px;
+}
+
+.logout {
+    margin-left: 20px;
+    width: 25px;
+    height: 25px;
+    background-image: url('../media/logout.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }

@@ -20,20 +20,24 @@
 
         // PHP FORMULAIRE INSCRIPTION   
 
-        if (isset($_POST['nom']) && !empty($_POST['nom']) && isset($_POST['prenom']) && !empty($_POST['prenom']) && isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['password']) &&!empty($_POST['password']) && isset($_POST['reponse_secrete']) && !empty($_POST['reponse_secrete'])) {
+        // if (isset($_POST['nom']) && !empty($_POST['nom'])
+        //     && isset($_POST['prenom']) && !empty($_POST['prenom']) 
+        //     && isset($_POST['username']) && !empty($_POST['username']) 
+        //     && isset($_POST['password']) &&!empty($_POST['password']) 
+        //     && isset($_POST['reponse_secrete']) && !empty($_POST['reponse_secrete'])) {
         
-        // SI tout les champs sont remplis et non vides (possible de réduire la condition?)
+        // // SI tout les champs sont remplis et non vides (possible de réduire la condition?)
 
-            $reponse = $bdd->query('SELECT * FROM utilisateurs WHERE username="'.$_POST["username"].'"')->fetchAll(); 
-            if (count($reponse) == 0) {
-                $pass_hash = password_hash($_POST['password'], PASSWORD_DEFAULT);                                                                                 // hash le password  
-                $reponse = $bdd->prepare('INSERT INTO utilisateurs(nom,prenom,username,password,question_secrete,reponse_secrete) VALUES(?,?,?,?,?,?)');          // va chercher les données de la bdd et demande leur valeur via $reponse
-                $reponse->execute(array($_POST['nom'], $_POST['prenom'], $_POST['username'], $pass_hash, $_POST['question_secrete'], $_POST['reponse_secrete'])); // execute les entrées du formulaire en tant que valeurs pour les données demandées dans $reponse et inclut les dans la bdd            
-            } else {
-                echo 'identifiant déjà utilisé';
-            }
+        //     $reponse = $bdd->query('SELECT * FROM utilisateurs WHERE username="'.$_POST["username"].'"')->fetchAll(); 
+        //     if (count($reponse) == 0) {
+        //         $pass_hash = password_hash($_POST['password'], PASSWORD_DEFAULT);                                                                                 // hash le password  
+        //         $reponse = $bdd->prepare('INSERT INTO utilisateurs(nom,prenom,username,password,question_secrete,reponse_secrete) VALUES(?,?,?,?,?,?)');          // va chercher les données de la bdd et demande leur valeur via $reponse
+        //         $reponse->execute(array($_POST['nom'], $_POST['prenom'], $_POST['username'], $pass_hash, $_POST['question_secrete'], $_POST['reponse_secrete'])); // execute les entrées du formulaire en tant que valeurs pour les données demandées dans $reponse et inclut les dans la bdd            
+        //     } else {
+        //         echo 'identifiant déjà utilisé';
+        //     }
 
-        }  
+        // }  
     ?>
     
 <!DOCTYPE html>
@@ -56,12 +60,12 @@
                 <label for="pseudo">User name : </label>
                 <input type="text" name="pseudo" autocomplete="off">
                 <label for="mdp">Mot de passe : </label>
-                <input type="text" name="mdp" autocomplete="off">
+                <input type="password" name="mdp" autocomplete="off">
                 <input type="submit">
             </fieldset>
         </form>
 
-        <!-- HTML FORMULAIRE D'INSCRIPTION -->
+        <!-- HTML FORMULAIRE D'INSCRIPTION
 
         <form  action="" method="post">
             <fieldset class="formulaire_inscription">
@@ -87,7 +91,7 @@
                 <input type="reset" value="Annuler">
                 <input type="submit" value="Créer mon compte">
             </fieldset>
-        </form>
+        </form> -->
     
     </body>
 </html>

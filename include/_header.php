@@ -9,6 +9,7 @@
             <img src="media/icon_compte.png" alt="" width="30px" height="30px">
             <p><?php echo $_SESSION['prenom'] ?></p>
             <p><?php echo $_SESSION['nom'] ?></p>
+            <a  class="logout "href="include/_logout.php"></a>
         </div>
     </header>
     
