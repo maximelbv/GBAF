@@ -106,6 +106,7 @@ Fonts : Poppins</br></br>
 
 <h2>Ressources used</h2> </br>
 
+Graphics : Adobe Illustrator, Adobe Photoshop</br>
 Editor : Visual Studio Code </br>
 Server : Apache 2.4.27, WAMP local</br>
 database : phpMyAdmin</br>

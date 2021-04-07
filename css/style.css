@@ -188,3 +188,90 @@ footer a {
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+/* INSCRIPTION */
+
+.header_inscription {
+    background: white;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.formulaire_inscription {
+    margin: 75px 100px 62px 100px ;
+    border: none;
+    color: #333333;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.formulaire_inscription div {
+    width: 400px;
+    margin: 12px 25px 12px 25px;
+}
+
+.formulaire_inscription input {
+    background: rgba(221, 221, 221, 0.575);
+    color: #333333;
+    font-family: poppins;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+    border: none;
+}
+
+.formulaire_inscription select {
+    font-family: poppins;
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+    border: 1px solid rgba(128, 128, 128, 0.219);
+}
+
+.formulaire_inscription input:focus {
+    outline: none;
+}
+
+.formulaire_inscription legend {
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+
+
+.dejamembre {
+    font-size: 12px;
+    align-self: flex-start;
+    margin: 5px 0px 15px 24px;
+    color: grey;
+}
+
+.dejamembre a {
+    text-decoration: none;
+    color: #2C7DFF;
+}
+
+.dejamembre a:visited {
+    color: #2C7DFF;
+}
+
+.illustration {
+    display: flex;
+    background: #ff2c2c;
+    width: 100%;
+    height: auto;
+}
+
+.illustration img {
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-left: auto;
+}
