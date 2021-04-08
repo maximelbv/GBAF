@@ -7,13 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Inscription</title>
     </head>
     <body class="body_inscription">
         
-        <div class="header_inscription">
+        <div class="header_inscription_connexion">
             <form  action="inscription.php" method="post">
-                <fieldset class="formulaire_inscription">
+                <fieldset class="formulaire">
                 <legend>S'inscrire</legend>
                 <p class="dejamembre">Déjà membre ? <a href="connexion.php">Se connecter</a></p>
                 
