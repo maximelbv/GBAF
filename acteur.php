@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,7 +15,7 @@
 
     <?php include("./include/_header.php");
 
-            $reponse = $bdd->prepare('SELECT * FROM acteurs WHERE identifiant=?');
+            $reponse = $bdd->prepare('SELECT * FROM acteurs WHERE id_acteur=?');
             $reponse->execute(array($_GET['id']));
             
             $donnees = $reponse->fetch();?>          
@@ -21,7 +23,7 @@
             <article class="presentation_page_acteur">
 
                     <img class="logo_page_acteur" src="<?php echo $donnees['logo'] ?>" alt="">
-                    <h2 class="nom_acteur"><?php echo $donnees['nom'] ?></h2>
+                    <h2 class="nom_acteur"><?php echo $donnees['acteur'] ?></h2>
                     <a href="">Lien</a>
                     <p><?php echo $donnees['description'] ?></p>
                 </article>

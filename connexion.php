@@ -3,7 +3,7 @@
         include('./include/_bdd_call.php');
 
         if (isset($_POST['pseudo'],$_POST['mdp'])) {                                                              
-            $reponse = $bdd->query('SELECT * FROM utilisateurs WHERE username="'.$_POST["pseudo"].'"')->fetchAll()[0]; 
+            $reponse = $bdd->query('SELECT * FROM account WHERE username="'.$_POST["pseudo"].'"')->fetchAll()[0]; 
             $isPasswordCorrect = password_verify($_POST['mdp'], $reponse['password']);                            
 
             if ($_POST['pseudo'] == $reponse['username'] && $isPasswordCorrect) {                               
