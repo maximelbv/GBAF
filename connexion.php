@@ -13,14 +13,14 @@
                     $_SESSION['nom'] = $reponse['nom'];                                              
                     header('LOCATION: index.php');                                                                
                 } else { 
-                    
-                    echo "Mauvais identifiant ou mot de passe";
+                    ?>
+                    <p>Mauvais identifiant ou mot de passe</p>
+                <?php
                 } 
         } 
 
 ?>
-    
-    
+       
 <!DOCTYPE html>
 <html lang="fr">
     <head>

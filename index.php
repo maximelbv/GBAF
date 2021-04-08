@@ -1,7 +1,11 @@
 
-<?php 
+<?php  
+    session_start();
+    if (!isset ($_SESSION['username'])) {
+        include('include/_redirection.php');
+    }
     include("./include/_bdd_call.php");
-    // session_start();
+    
 ?>
 <!DOCTYPE html>
 <html lang="fr">
