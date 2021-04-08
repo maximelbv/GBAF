@@ -69,7 +69,7 @@
                         && isset($_POST['password']) &&!empty($_POST['password']) 
                         && isset($_POST['reponse_secrete']) && !empty($_POST['reponse_secrete'])) {
 
-                    // SI tout les champs sont remplis et non vides (possible de réduire la condition?)
+                        // SI tout les champs sont remplis et non vides
 
                         $reponse = $bdd->query('SELECT * FROM utilisateurs WHERE username="'.$_POST["username"].'"')->fetchAll(); 
                         if (count($reponse) == 0) {
@@ -77,7 +77,12 @@
                             $reponse = $bdd->prepare('INSERT INTO utilisateurs(nom,prenom,username,password,question_secrete,reponse_secrete) VALUES(?,?,?,?,?,?)');          // va chercher les données de la bdd et demande leur valeur via $reponse
                             $reponse->execute(array($_POST['nom'], $_POST['prenom'], $_POST['username'], $pass_hash, $_POST['question_secrete'], $_POST['reponse_secrete'])); // execute les entrées du formulaire en tant que valeurs pour les données demandées dans $reponse et inclut les dans la bdd            
                         } else {
-                            echo 'identifiant déjà utilisé';
+                            ?> 
+                            <div class="id_deja_utilise">
+                                <img src="media/error.png" alt="" width="15px" height="15px"> 
+                                <p>identifiant déjà utilisé</p> 
+                            </div>
+                            <?php
                         }
 
                     }  
@@ -89,7 +94,8 @@
             </form>
 
             <div class="illustration">
-                <img src="media/isometric.svg" alt="" width="1000px">
+                <img id="isometric" src="media/isometric.svg" alt="" width="1000px">
+                <img id="isometric2" src="media/isometric2" alt="" width="400px">
             </div>
 
                 </div>

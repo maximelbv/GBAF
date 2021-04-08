@@ -3,6 +3,15 @@
     src: url('../media/fonts/Poppins-Light.ttf');
 }
 
+@font-face {
+    font-family: julius;
+    src: url('../media/fonts/JuliusSansOne-Regular.ttf');
+}
+    
+
+
+
+
 body {
     margin: 0;
     font-family: Poppins;
@@ -139,32 +148,7 @@ footer a {
     text-decoration: none;
 }
 
-@media screen and (min-width: 725px) and (max-width: 1366px) {
-    .nomDescLogo {
-        width: auto;
-    }
 
-    #logo {
-        margin-left: 20px;
-    }
-}
-
-@media screen and (min-width: 250px) and (max-width: 725px) {
-    
-    .nomDesc {
-        width: auto;
-        margin: 30px;
-    }
-
-    .nomDescLogo {
-        flex-direction: column;
-    }
-
-    #logo {
-        margin-top: 20px;
-        margin-left: 0px;
-    }
-}
 
 /* PAGE ACTEUR */
 
@@ -192,18 +176,19 @@ footer a {
 /* INSCRIPTION */
 
 .header_inscription {
+    height: 978px;
+    width: 100%;
     background: white;
-    
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: safe;
 }
 
 .formulaire_inscription {
-    margin: 75px 100px 62px 100px ;
+    margin: 75px 100px 0px 100px ;
     border: none;
     color: #333333;
-    width: auto;
+    width: 400px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -245,8 +230,6 @@ footer a {
     margin-left: 20px;
 }
 
-
-
 .dejamembre {
     font-size: 12px;
     align-self: flex-start;
@@ -266,12 +249,83 @@ footer a {
 .illustration {
     display: flex;
     background: #ff2c2c;
-    width: 100%;
+    width: 70%;
     height: auto;
 }
 
-.illustration img {
+#isometric {
     align-self: flex-end;
     justify-self: flex-end;
     margin-left: auto;
+}
+
+#isometric2 {
+    position: fixed;
+    margin: 50px 40px 0px 60px;
+}
+
+.id_deja_utilise {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.id_deja_utilise img {
+    margin-right: 7px;
+}
+
+@media screen and (min-width: 725px) and (max-width: 1366px) {
+    .nomDescLogo {
+        width: auto;
+    }
+
+    #logo {
+        margin-left: 20px;
+    }
+
+    #isometric {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 950px) and (max-width: 1200px) {
+
+    #isometric2 {
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 250px) and (max-width: 950px){
+
+    .illustration {
+        display: none;
+    }
+
+    #isometric2 {
+        display: none;
+    }
+
+    .header_inscription {
+        justify-content: center;
+    }
+
+}
+
+@media screen and (min-width: 250px) and (max-width: 725px) {
+    
+    .nomDesc {
+        width: auto;
+        margin: 30px;
+    }
+
+    .nomDescLogo {
+        flex-direction: column;
+    }
+
+    #logo {
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+
 }
