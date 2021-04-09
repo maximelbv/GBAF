@@ -40,8 +40,8 @@
 
             <?php
                 if (isset($_POST['commentaire']) && !empty($_POST['commentaire'])) {
-                    $create = $bdd->prepare('INSERT INTO post(post, id_user) VALUES(?,?)');
-                    $create->execute(array($_POST['commentaire'], $_SESSION['id_user']));
+                    $create = $bdd->prepare('INSERT INTO post(post, id_user,id_acteur) VALUES(?,?,?)');
+                    $create->execute(array($_POST['commentaire'], $_SESSION['id_user'],$_GET['id']));
                     
                 }
                   
@@ -53,7 +53,10 @@
                 $appel = $bdd->query('SELECT * FROM post INNER JOIN account ON post.id_user = account.id_user');
                 $appel->execute();
                 while ($liste = $appel->fetch()) {
-                    echo $liste['prenom'] . " " . $liste['nom'] ?> </br> <?php echo $liste ['date_add'] ?> </br> <?php echo $liste['post']; ?> </br></br>  <?php
+                    if ($liste['id_acteur'] == $_GET['id']) {
+                        echo $liste['prenom'] . " " . $liste['nom'] ?> </br> <?php echo $liste ['date_add'] ?> </br> <?php echo $liste['post']; ?> </br></br> <?php
+                    }
+                    
                 } 
             ?>
 
