@@ -10,7 +10,8 @@
                     session_start();                                                                   
                     $_SESSION['username'] = $reponse['username'];   
                     $_SESSION['prenom'] = $reponse['prenom'];
-                    $_SESSION['nom'] = $reponse['nom'];                                              
+                    $_SESSION['nom'] = $reponse['nom']; 
+                    $_SESSION['id_user'] = $reponse['id_user'];                                             
                     header('LOCATION: index.php');                                                                
                 } else { 
                     ?>

@@ -7,11 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Titre</title>
+    <title>Page acteur</title>
 </head>
 <body>
 
-    <?php include('./include/_bdd_call.php') ?>
+    <?php 
+        include('./include/_bdd_call.php');
+    ?>
 
     <?php include("./include/_header.php");
 
@@ -36,7 +38,14 @@
             <input type="button" value="Nouveau commentaire">
         </div> -->
 
-        
+            <?php
+                if (isset($_POST['commentaire']) && !empty($_POST['commentaire'])) {
+                    $create = $bdd->prepare('INSERT INTO post(post, id_user) VALUES(?,?)');
+                    $create->execute(array($_POST['commentaire'], $_SESSION['id_user']));
+                    
+                }
+                  
+            ?>
 
         <div class="liste_commentaires">
     
@@ -45,7 +54,7 @@
                 $appel->execute();
                 while ($liste = $appel->fetch()) {
                     echo $liste['prenom'] . " " . $liste['nom'] ?> </br> <?php echo $liste ['date_add'] ?> </br> <?php echo $liste['post']; ?> </br></br>  <?php
-                }
+                } 
             ?>
 
 
@@ -54,6 +63,9 @@
         <form action="" method="post">
             <input type="text" name="commentaire" id="commentaire">
             <input type="submit">
+
+            
+
         </form>
 
     </section>

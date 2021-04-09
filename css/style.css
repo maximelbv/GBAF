@@ -170,6 +170,10 @@ footer a {
     background-size: contain;
 }
 
+.commentaires {
+    padding: 0px 100px 100px 100px;
+}
+
 /* INSCRIPTION */
 
 .header_inscription_connexion {
