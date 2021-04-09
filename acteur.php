@@ -31,10 +31,31 @@
          
     <section class="commentaires">  
 
-        <div class="header_com">
+        <!-- <div class="header_com">
             <p>X commentaires</p>
             <input type="button" value="Nouveau commentaire">
+        </div> -->
+
+        
+
+        <div class="liste_commentaires">
+    
+            <?php          
+                $appel = $bdd->query('SELECT * FROM post INNER JOIN account ON post.id_user = account.id_user');
+                $appel->execute();
+                while ($liste = $appel->fetch()) {
+                    echo $liste['prenom'] . " " . $liste['nom'] ?> </br> <?php echo $liste ['date_add'] ?> </br> <?php echo $liste['post']; ?> </br></br>  <?php
+                }
+            ?>
+
+
         </div>
+
+        <form action="" method="post">
+            <input type="text" name="commentaire" id="commentaire">
+            <input type="submit">
+        </form>
+
     </section>
 
     <?php include("./include/_footer.php"); ?>

@@ -46,8 +46,8 @@ This project is the last exercise of my training. It aims to train me in PHP and
     </ul> </br>
 ⬛ If the user forgets his password, he can enter his UserName and answer the secret question to create a new one.</br>
 ✅ When the user is logged in, his name and first name are indicated in the header on all pages.</br>
-⬛ A button "Disconnect" is present in the header.</br>
-⬛ If the user is logged out, he is automatically redirected to the first page for a new connection via an UserName and a Password..</br></br>
+✅ A button "Disconnect" is present in the header.</br>
+✅ If the user is logged out, he is automatically redirected to the first page for a new connection via an UserName and a Password..</br></br>
 
 <h3>User connected</h3>
 
@@ -84,8 +84,8 @@ This project is the last exercise of my training. It aims to train me in PHP and
 ✅ Login form : Login if the ids match</br>
 ✅ Login form : Redirection to the header with the session started</br>
 ✅ Media queries for the index page</br>
+✅ Styling the login and register pages</br>
 ⬛ Register form : REGEX</br>
-⬛ Styling the login and register pages</br>
 ⬛ Password lost page</br>
 ⬛ Styling and add responsive to the single actor page </br>
 ⬛ Comment section in the single actor pages</br>
