@@ -29,15 +29,15 @@
                 GBAF (Groupement Banque Assurance Français)
             </h1>
             <p>
-                Le Groupement Banque Assurance Français (GBAF) est une fédération représentant les 6 grands groupes français :</br>
+                Le Groupement Banque Assurance Français (GBAF) est une fédération représentant les 6 grands groupes français :<br>
 
-                BNP Paribas / BPCE / Crédit Agricole / Crédit Mutuel-CIC / Société Générale / La Banque Postale.</br></br>
+                BNP Paribas / BPCE / Crédit Agricole / Crédit Mutuel-CIC / Société Générale / La Banque Postale.<br><br>
                 Même s’il existe une forte concurrence entre ces entités, elles vont toutes travailler de la même façon pour gérer près de 80 millions de comptes sur le territoire national. Le GBAF est le représentant de la profession bancaire et des assureurs sur tous les axes de la réglementation financière française. Sa mission est de promouvoir l'activité bancaire à l’échelle nationale.
-                C’est aussi un interlocuteur privilégié des pouvoirs publics.</br></br>
+                C’est aussi un interlocuteur privilégié des pouvoirs publics.<br><br>
 
-                Les produits et services bancaires sont nombreux et très variés. Afin de renseigner au mieux les clients, les salariés des 340 agences des banques et assurances en France (agents, chargés de clientèle, conseillers financiers, etc.) recherchent sur Internet des informations portant sur des produits bancaires et des financeurs, entre autres.</br></br>
+                Les produits et services bancaires sont nombreux et très variés. Afin de renseigner au mieux les clients, les salariés des 340 agences des banques et assurances en France (agents, chargés de clientèle, conseillers financiers, etc.) recherchent sur Internet des informations portant sur des produits bancaires et des financeurs, entre autres.<br><br>
 
-                Aujourd’hui, il n’existe pas de base de données pour chercher ces informations de manière fiable et rapide ou pour donner son avis sur les partenaires et acteurs du secteur bancaire, tels que les associations ou les financeurs solidaires. Pour remédier à cela, le GBAF souhaite proposer aux salariés des grands groupes français un point d’entrée unique, répertoriant un grand nombre d’informations sur les partenaires et acteurs du groupe ainsi que sur les produits et services bancaires et financiers. Chaque salarié pourra ainsi poster un commentaire et donner son avis.</br></br>
+                Aujourd’hui, il n’existe pas de base de données pour chercher ces informations de manière fiable et rapide ou pour donner son avis sur les partenaires et acteurs du secteur bancaire, tels que les associations ou les financeurs solidaires. Pour remédier à cela, le GBAF souhaite proposer aux salariés des grands groupes français un point d’entrée unique, répertoriant un grand nombre d’informations sur les partenaires et acteurs du groupe ainsi que sur les produits et services bancaires et financiers. Chaque salarié pourra ainsi poster un commentaire et donner son avis.<br><br>
 
                 Cet extranet à donc été crée dans ce but.
             </p>
@@ -67,7 +67,7 @@
                 <li class='informations'>
                     
                     <div class="nomDescLogo">
-                        <img  id="logo" src="<?php echo $donnees['logo'] ?>" alt="">
+                        <img class="logo" src="<?php echo $donnees['logo'] ?>" alt="">
                         <div class='nomDesc'>
                             
                             <h3><?php echo $donnees['acteur'] ?></h3>
@@ -80,7 +80,7 @@
                         </div>
                     </div>
 
-                    <a id='lirelasuite' href="acteur.php?id=<?php echo $donnees['id_acteur']?>">lire la suite</a>
+                    <a class='lirelasuite' href="acteur.php?id=<?php echo $donnees['id_acteur']?>">lire la suite</a>
                 </li>
                 
             

@@ -15,42 +15,38 @@
             <form  action="inscription.php" method="post">
                 <fieldset class="formulaire">
                 <legend>S'inscrire</legend>
-                <p class="dejamembre">Déjà membre ? <a href="connexion.php">Se connecter</a></p>
+                    <p class="dejamembre">Déjà membre ? <a href="connexion.php">Se connecter</a></p>
                 
                     <div>
-                        <label for="nom">Nom : </label>
-                        <input type="text" name="nom" required autocomplete="off" placeholder="Doe">
+                        <label>Nom : <input type="text" name="nom" required autocomplete="off" placeholder="Doe"></label> 
                     </div>
 
                     <div>
-                        <label for="prenom">Prénom : </label>
-                        <input type="text" name="prenom" required autocomplete="off" placeholder="John">
+                        <label>Prénom : <input type="text" name="prenom" required autocomplete="off" placeholder="John"></label>  
                     </div>
 
                     <div>
-                        <label for="username">User Name : </label>
-                        <input type="text" name="username" required autocomplete="off">
+                        <label>User Name : <input type="text" name="username" required autocomplete="off"></label>   
                     </div>
 
                     <div>
-                        <label for="password">Mot de passe : </label>
-                        <input type="password" name="password" required autocomplete="off">
+                        <label>Mot de passe : <input type="password" name="password" required autocomplete="off"></label>    
                     </div>
 
                     <div>
-                        <label for="question_secrete">Question secrète : </label>
-                        <select name="question_secrete">
-                            <option value="choix" disabled>--Choisissez une option--</option>
-                            <option value="Dans quelle ville êtes-vous né ?">Dans quelle ville êtes-vous né ?</option>
-                            <option value="Quel est votre film favori ?">Quel est votre film favori ?</option>
-                            <option value="Quelle est votre couleur favorite ?">Quelle est votre couleur favorite ?</option>
-                            <option value="Quel est le prénom de votre grand-mère maternelle ?">Quel est le prénom de votre grand-mère maternelle ?</option>
-                        </select>    
+                        <label>Question secrète : 
+                            <select name="question_secrete">
+                                <option value="choix" disabled>--Choisissez une option--</option>
+                                <option value="Dans quelle ville êtes-vous né ?">Dans quelle ville êtes-vous né ?</option>
+                                <option value="Quel est votre film favori ?">Quel est votre film favori ?</option>
+                                <option value="Quelle est votre couleur favorite ?">Quelle est votre couleur favorite ?</option>
+                                <option value="Quel est le prénom de votre grand-mère maternelle ?">Quel est le prénom de votre grand-mère maternelle ?</option>
+                            </select>    
+                        </label>
                     </div>
 
                     <div>
-                        <label for="reponse_secrete">Réponse à la question secrète : </label>
-                        <input type="text" name="reponse_secrete" required autocomplete="off">
+                        <label>Réponse à la question secrète : <input type="text" name="reponse_secrete" required autocomplete="off"></label>
                     </div>
 
                     <div>
@@ -80,7 +76,7 @@
                         } else {
                             ?> 
                             <div class="id_deja_utilise">
-                                <img src="media/error.png" alt="" width="15px" height="15px"> 
+                                <img src="media/error.png" alt="" width="15" height="15"> 
                                 <p>identifiant déjà utilisé</p> 
                             </div>
                             <?php
@@ -95,8 +91,8 @@
             </form>
 
             <div class="illustration">
-                <img id="isometric" src="media/isometric.svg" alt="" width="1000px">
-                <img id="isometric2" src="media/isometric2" alt="" width="400px">
+                <img id="isometric" src="media/isometric.svg" alt="" width="1000">
+                <img id="isometric2" src="media/isometric2" alt="" width="400">
             </div>
 
                 </div>

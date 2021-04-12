@@ -32,7 +32,7 @@
             
          
     <section class="commentaires">  
-
+        <h1>Commentaires</h1>
         <!-- <div class="header_com">
             <p>X commentaires</p>
             <input type="button" value="Nouveau commentaire">
@@ -54,7 +54,7 @@
                 $appel->execute();
                 while ($liste = $appel->fetch()) {
                     if ($liste['id_acteur'] == $_GET['id']) {
-                        echo $liste['prenom'] . " " . $liste['nom'] ?> </br> <?php echo $liste ['date_add'] ?> </br> <?php echo $liste['post']; ?> </br></br> <?php
+                        echo $liste['prenom'] . " " . $liste['nom'] ?> <br> <?php echo $liste ['date_add'] ?> <br> <?php echo $liste['post']; ?> <br><br> <?php
                     }
                     
                 } 
@@ -63,7 +63,7 @@
 
         </div>
 
-        <form action="" method="post">
+        <form method="post">
             <input type="text" name="commentaire" id="commentaire" autocomplete="off">
             <input type="submit">
         </form>

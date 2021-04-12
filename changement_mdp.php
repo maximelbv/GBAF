@@ -1,11 +1,12 @@
 <?php 
     include('./include/_bdd_call.php');
+    $question = null;
     if (isset($_POST['pseudo'])) {
         $reponse = $bdd->query('SELECT * FROM account WHERE username="'.$_POST["pseudo"].'"')->fetchAll()[0];
         if (!empty($reponse)) {
             session_start();
             $_SESSION['question'] = $reponse['question'];
-            echo $reponse['question'];
+            $question = $reponse['question'];
         } else {
             echo "non";
         }
@@ -23,18 +24,20 @@
 </head>
 <body>
     <div class="header_inscription_connexion">
-        <form action="" method="post">
+        <form action="changement_mdp.php" method="post">
         <fieldset class="formulaire">
             <legend>Changer son mot de passe</legend>
-            <label for="pseudo">Username : </label>
-            <input type="text" name="pseudo" required autocomplete="off">
+            <p class="dejamembre"><a href="connexion.php">Revenir à la connexion</a></p>
+            <div><label>Username : <input type="text" name="pseudo" required autocomplete="off"></label></div>
+            
             <input type="submit">
+            <p><?php echo $question; ?></p>
             </fieldset>
         </form>
 
         <div class="illustration">
-            <img id="isometric" src="media/isometric.svg" alt="" width="1000px">
-            <img id="isometric2" src="media/isometric2" alt="" width="400px">                    
+            <img id="isometric" src="media/isometric.svg" alt="" width="1000">
+            <img id="isometric2" src="media/isometric2" alt="" width="400">                    
         </div>
     </div>
 </body>
