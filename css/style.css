@@ -295,6 +295,18 @@ footer a {
     margin-right: 7px;
 }
 
+.mauvais_id {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin-top: 425px;
+    margin-left: 150px;
+}
+
+.mauvais_id img {
+    margin-right: 7px;
+}
+
 @media screen and (min-width: 725px) and (max-width: 1366px) {
     .nomDescLogo {
         width: auto;
@@ -312,7 +324,13 @@ footer a {
 @media screen and (min-width: 950px) and (max-width: 1200px) {
 
     #isometric2 {
-        width: auto;
+        position: relative;
+        width: 80%;
+        margin: 0px;
+    }
+
+    .illustration {
+        justify-content: center;
     }
 }
 

@@ -15,7 +15,10 @@
                     header('LOCATION: index.php');                                                                
                 } else { 
                     ?>
-                    <p>Mauvais identifiant ou mot de passe</p>
+                    <div class="mauvais_id">
+                        <img src="media/error.png" alt="" width="15px" height="15px"> 
+                        <p>Mauvais identifiant ou mot de passe</p> 
+                    </div>
                 <?php
                 } 
         } 
@@ -43,10 +46,12 @@
 
                     <legend>Se Connecter</legend>
                     <p class="pasdecompte">Pas de compte ? <a href="inscription.php">Créer un compte</a></p>
+                    
                     <label for="pseudo">User name : </label>
                     <input type="text" name="pseudo"  required autocomplete="off">
                     <label for="mdp">Mot de passe : </label>
                     <input type="password" name="mdp" required autocomplete="off">
+                    <p class="pasdecompte"><a href="changement_mdp.php">Mot de passe oublié ? </a></p>
                     <input type="submit">                                                                                                         
                         
                 </fieldset>

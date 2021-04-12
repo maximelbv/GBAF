@@ -41,10 +41,10 @@
                         <label for="question_secrete">Question secrète : </label>
                         <select name="question_secrete">
                             <option value="choix" disabled>--Choisissez une option--</option>
-                            <option value="opt1">Dans quelle ville êtes-vous né ?</option>
-                            <option value="opt2">Quel est votre film favori ?</option>
-                            <option value="opt3">Quelle est votre couleur favorite ?</option>
-                            <option value="opt4">Quel est le prénom de votre grand-mère maternelle ?</option>
+                            <option value="Dans quelle ville êtes-vous né ?">Dans quelle ville êtes-vous né ?</option>
+                            <option value="Quel est votre film favori ?">Quel est votre film favori ?</option>
+                            <option value="Quelle est votre couleur favorite ?">Quelle est votre couleur favorite ?</option>
+                            <option value="Quel est le prénom de votre grand-mère maternelle ?">Quel est le prénom de votre grand-mère maternelle ?</option>
                         </select>    
                     </div>
 
