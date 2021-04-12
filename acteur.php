@@ -64,11 +64,8 @@
         </div>
 
         <form action="" method="post">
-            <input type="text" name="commentaire" id="commentaire">
+            <input type="text" name="commentaire" id="commentaire" autocomplete="off">
             <input type="submit">
-
-            
-
         </form>
 
     </section>
