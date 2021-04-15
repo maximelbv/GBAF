@@ -91,6 +91,7 @@ footer {
         }
     }
     &__liste {
+        padding: 0px;
         &__elem {
             display: flex;
             flex-direction: column;
@@ -259,4 +260,22 @@ footer {
             margin-right: 10px;
         }
     }
+}
+
+// REDIRECTION.PHP
+
+.body_redirection {
+    background-image: url('../media/isometric_success.svg');
+    background-position: 100% 100%;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    color: rgb(54, 54, 54);
+    width: auto;
+    height: 875px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    margin-top: 100px;
 }

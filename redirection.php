@@ -3,10 +3,12 @@
 
 <?php include('include/_head.php') ?>
 
-<body>
-    <h1>Votre compte a bien été créé, vous allez être redirigé vers la page de connexion.</h1>
+<body class="body_redirection">
+    <img src="media/check.png" alt="" width="100px">
+    <h1>Succès !</h1>
+    <h2>Votre compte été créé <br>vous allez être redirigé vers la page de connexion.</h2>
     <?php
-        header("Refresh:5; url=http://localhost/Formation/GBAF/connexion.php");
+        header("Refresh:3; url=http://localhost/Formation/GBAF/connexion.php");
     ?>
 </body>
 </html>

@@ -49,7 +49,7 @@
 
             </div>
 
-            <ul id="index_acteurs__liste">
+            <ul class="index_acteurs__liste">
                 <?php 
                 $reponse = $bdd->query('SELECT * FROM acteurs');
                 while ($donnees = $reponse->fetch()) :   

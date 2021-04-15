@@ -2,4 +2,10 @@
   .log_body__illustration__isometric2 {
     display: none;
   }
+  .acteur_presentation__logo {
+    width: 80%;
+  }
+  .body_redirection {
+    background-image: none;
+  }
 }
