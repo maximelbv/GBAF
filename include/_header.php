@@ -1,8 +1,3 @@
-    
-    <?php 
-        // session_start(); 
-    ?>
-    
     <header class="header">
         <a href="index.php"><img  class="header__logo_gbaf" src="media/logo_gbaf.png" alt="logo_gbaf" width="50"></a>
         <div class="header__compte">
