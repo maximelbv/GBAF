@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.min.css">
         <title>Inscription</title>
     </head>
 
@@ -63,8 +63,9 @@
                             if (count($reponse) == 0) {
                                     $pass_hash = password_hash($_POST['password'], PASSWORD_DEFAULT);                                                                                 // hash le password  
                                     $reponse = $bdd->prepare('INSERT INTO account(nom,prenom,username,password,question,reponse) VALUES(?,?,?,?,?,?)');          // va chercher les données de la bdd et demande leur valeur via $reponse
-                                    $reponse->execute(array($_POST['nom'], $_POST['prenom'], $_POST['username'], $pass_hash, $_POST['question_secrete'], $_POST['reponse_secrete'])); // execute les entrées du formulaire en tant que valeurs pour les données demandées dans $reponse et inclut les dans la bdd  
-                                    header('Location: connexion.php');         
+                                    $reponse->execute(array($_POST['nom'], $_POST['prenom'], $_POST['username'], $pass_hash, $_POST['question_secrete'], $_POST['reponse_secrete'])); // execute les entrées du formulaire en tant que valeurs pour les données demandées dans $reponse et inclut les dans la bdd   
+                                    header('Location: redirection.php');
+                                    // header( "Refresh:5; url=http://localhost/Formation/GBAF/connexion.php");       
                             } else { ?>   
                                 <div class="id_deja_utilise">
                                     <img src="media/error.png" alt="" width="15" height="15"> 
