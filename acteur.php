@@ -24,16 +24,16 @@
 
         ?> 
 
-        <article class="presentation_page_acteur">
+        <article class="acteur_presentation">
 
-            <img class="logo_page_acteur" src="<?php echo $donnees['logo'] ?>" alt="">
+            <img class="acteur_presentation__logo" src="<?php echo $donnees['logo'] ?>" alt="">
             <h2 class="nom_acteur"><?php echo $donnees['acteur'] ?> </h2>
             <a href="">Lien</a>
             <p> <?php echo $donnees['description'] ?> </p>
 
         </article>
                   
-        <section class="commentaires">  
+        <section class="acteur_commentaires">  
 
             <h1>Commentaires</h1>
 

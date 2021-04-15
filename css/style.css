@@ -32,6 +32,15 @@ body {
   padding: 3px;
 }
 
+.header__compte__btn_logout {
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+  background-image: url("../media/logout.png");
+  background-position: center;
+  background-size: contain;
+}
+
 footer {
   width: 100%;
   height: 100px;
@@ -121,34 +130,23 @@ footer a {
   border-radius: 20px;
 }
 
-/* PAGE ACTEUR */
-.presentation_page_acteur {
+.acteur_presentation {
   display: flex;
   flex-direction: column;
   padding: 100px;
 }
 
-.logo_page_acteur {
+.acteur_presentation__logo {
   align-self: center;
   margin-bottom: 50px;
 }
 
-.logout {
-  margin-left: 20px;
-  width: 25px;
-  height: 25px;
-  background-image: url("../media/logout.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.commentaires {
+.acteur_commentaires {
   padding: 0px 100px 100px 100px;
 }
 
-/* INSCRIPTION */
-.header_inscription_connexion {
+/* LOG PAGES (INSCRIPTION.PHP / CONNEXION.PHP / CHANGEMENT_MDP.PHP) */
+.log_body {
   height: 975px;
   width: 100%;
   background: white;
@@ -156,7 +154,25 @@ footer a {
   flex-direction: row;
 }
 
-.formulaire {
+.log_body__illustration {
+  display: flex;
+  background: #ff2c2c;
+  width: 70%;
+  height: auto;
+}
+
+.log_body__illustration__isometric {
+  align-self: flex-end;
+  justify-self: flex-end;
+  margin-left: auto;
+}
+
+.log_body__illustration__isometric2 {
+  position: fixed;
+  margin: 50px 40px 0px 60px;
+}
+
+.log_form {
   margin: 75px 100px 0px 100px;
   border: none;
   color: #333333;
@@ -167,12 +183,73 @@ footer a {
   align-items: center;
 }
 
-.formulaire div {
+.log_form legend {
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.log_form__btn_dejamembre {
+  font-size: 12px;
+  align-self: flex-start;
+  margin: 5px 0px 15px 24px;
+  color: grey;
+}
+
+.log_form__btn_dejamembre a {
+  text-decoration: none;
+  color: #2C7DFF;
+}
+
+.log_form__btn_dejamembre a:visited {
+  color: #2C7DFF;
+}
+
+.log_form__btn_pasdecompte {
+  font-size: 12px;
+  align-self: flex-start;
+  margin: 5px 0px 15px 24px;
+  color: grey;
+}
+
+.log_form__btn_pasdecompte a {
+  text-decoration: none;
+  color: #2C7DFF;
+}
+
+.log_form__btn_pasdecompte a:visited {
+  color: #2C7DFF;
+}
+
+.log_form__btn_mdpoublie a {
+  font-size: 12px;
+  align-self: flex-start;
+  margin: 5px 0px 15px 24px;
+  color: #2C7DFF;
+  text-decoration: none;
+}
+
+.log_form__btn_mdpoublie a:visited {
+  color: #2C7DFF;
+}
+
+.log_form__btn_reveniralaconnexion a {
+  font-size: 12px;
+  align-self: flex-start;
+  margin: 5px 0px 15px 24px;
+  color: #2C7DFF;
+  text-decoration: none;
+}
+
+.log_form__btn_reveniralaconnexion a:visited {
+  color: #2C7DFF;
+}
+
+.log_form div {
   width: 400px;
   margin: 12px 25px 12px 25px;
 }
 
-.formulaire input {
+.log_form input {
   background: rgba(221, 221, 221, 0.575);
   color: #333333;
   font-family: poppins;
@@ -185,7 +262,11 @@ footer a {
   border: none;
 }
 
-.formulaire select {
+.log_form input:focus {
+  outline: none;
+}
+
+.log_form select {
   font-family: poppins;
   width: 100%;
   height: 40px;
@@ -193,73 +274,14 @@ footer a {
   border: 1px solid rgba(128, 128, 128, 0.219);
 }
 
-.formulaire input:focus {
-  outline: none;
-}
-
-.formulaire legend {
-  font-size: 25px;
-  margin-left: 20px;
-}
-
-.dejamembre {
-  font-size: 12px;
-  align-self: flex-start;
-  margin: 5px 0px 15px 24px;
-  color: grey;
-}
-
-.dejamembre a {
-  text-decoration: none;
-  color: #2C7DFF;
-}
-
-.dejamembre a:visited {
-  color: #2C7DFF;
-}
-
-.pasdecompte {
-  font-size: 12px;
-  align-self: flex-start;
-  margin: 5px 0px 15px 24px;
-  color: grey;
-}
-
-.pasdecompte a {
-  text-decoration: none;
-  color: #2C7DFF;
-}
-
-.pasdecompte a:visited {
-  color: #2C7DFF;
-}
-
-.illustration {
-  display: flex;
-  background: #ff2c2c;
-  width: 70%;
-  height: auto;
-}
-
-#isometric {
-  align-self: flex-end;
-  justify-self: flex-end;
-  margin-left: auto;
-}
-
-#isometric2 {
-  position: fixed;
-  margin: 50px 40px 0px 60px;
-}
-
-.id_deja_utilise {
+.log_form__error_iddejautilise {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-.id_deja_utilise img {
+.log_form__error_iddejautilise img {
   margin-right: 7px;
 }
 

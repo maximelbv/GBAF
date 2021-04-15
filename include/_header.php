@@ -9,7 +9,7 @@
             <img src="media/icon_compte.png" alt="" width="30" height="30">
             <p><?php echo $_SESSION['prenom'] ?></p>
             <p><?php echo $_SESSION['nom'] ?></p>
-            <a  class="logout" href="include/_logout.php"></a>
+            <a  class="header__compte__btn_logout" href="include/_logout.php"></a>
         </div>
     </header>
     

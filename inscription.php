@@ -10,17 +10,15 @@
         <title>Inscription</title>
     </head>
 
-    <body class="body_inscription">
+    <body class="log_body">
         
-        <div class="header_inscription_connexion">
-
             <form  action="inscription.php" method="post">
 
-                <fieldset class="formulaire">
+                <fieldset class="log_form">
 
                     <legend>S'inscrire</legend>
 
-                    <p class="dejamembre">Déjà membre ? <a href="connexion.php">Se connecter</a></p>
+                    <p class="log_form__btn_dejamembre">Déjà membre ? <a href="connexion.php">Se connecter</a></p>
                 
                     <div> <label>Nom : <input type="text" name="nom" required autocomplete="off" placeholder="Doe"></label> </div>
 
@@ -66,7 +64,7 @@
                                     $reponse->execute(array($_POST['nom'], $_POST['prenom'], $_POST['username'], $pass_hash, $_POST['question_secrete'], $_POST['reponse_secrete'])); // execute les entrées du formulaire en tant que valeurs pour les données demandées dans $reponse et inclut les dans la bdd   
                                     header('Location: redirection.php');      
                             } else { ?>   
-                                <div class="id_deja_utilise">
+                                <div class="log_form__error_iddejautilise">
                                     <img src="media/error.png" alt="" width="15" height="15"> 
                                     <p>identifiant déjà utilisé</p> 
                                 </div>
@@ -78,12 +76,7 @@
                   
             </form>
 
-            <div class="illustration">
-                <img id="isometric" src="media/isometric.svg" alt="" width="1000">
-                <img id="isometric2" src="media/isometric2" alt="" width="400">
-            </div>
+            <?php include('include/_log_illustration.php') ?>
 
-        </div>
-        
     </body>
 </html>

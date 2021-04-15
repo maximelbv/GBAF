@@ -28,6 +28,14 @@ body {
         & * {
             padding: 3px;
         }
+        &__btn_logout {
+            margin-left: 10px;
+            width: 25px;
+            height: 25px;
+            background-image: url('../media/logout.png');
+            background-position: center;
+            background-size: contain;
+        }
     }
  }
 
@@ -48,7 +56,7 @@ footer {
     }
 }
 
-// INDEX
+// INDEX.PHP
 
 .index_presentation {
     display: flex;
@@ -117,46 +125,48 @@ footer {
     }
 }
 
+// ACTEUR.PHP
 
-
-/* PAGE ACTEUR */
-
-.presentation_page_acteur {
+.acteur_presentation {
     display: flex;
     flex-direction: column;
     padding: 100px;
+    &__logo {
+        align-self: center;
+        margin-bottom: 50px;
+    }
 }
 
-.logo_page_acteur {
-    align-self: center;
-    margin-bottom: 50px;
-}
-
-.logout {
-    margin-left: 20px;
-    width: 25px;
-    height: 25px;
-    background-image: url('../media/logout.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.commentaires {
+.acteur_commentaires {
     padding: 0px 100px 100px 100px;
 }
 
-/* INSCRIPTION */
+/* LOG PAGES (INSCRIPTION.PHP / CONNEXION.PHP / CHANGEMENT_MDP.PHP) */
 
-.header_inscription_connexion {
+.log_body {
     height: 975px;
     width: 100%;
     background: white;
     display: flex;
     flex-direction: row;
+    &__illustration {
+        display: flex;
+        background: #ff2c2c;
+        width: 70%;
+        height: auto;
+        &__isometric {
+            align-self: flex-end;
+            justify-self: flex-end;
+            margin-left: auto;
+        }
+        &__isometric2 {
+            position: fixed;
+            margin: 50px 40px 0px 60px;
+        }
+    }
 }
 
-.formulaire {
+.log_form {
     margin: 75px 100px 0px 100px ;
     border: none;
     color: #333333;
@@ -165,105 +175,83 @@ footer {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    & legend {
+        font-size: 25px;
+        margin-left: 20px;
+    }
+    &__btn_dejamembre {
+        font-size: 12px;
+        align-self: flex-start;
+        margin: 5px 0px 15px 24px;
+        color: grey;
+        & a {
+            text-decoration: none;
+            color: #2C7DFF;
+            &:visited {color: #2C7DFF;}
+        }
+    }
+    &__btn_pasdecompte {
+        font-size: 12px;
+        align-self: flex-start;
+        margin: 5px 0px 15px 24px;
+        color: grey;
+        & a {
+            text-decoration: none;
+            color: #2C7DFF;
+            &:visited {color: #2C7DFF;}
+        } 
+    }
+    &__btn_mdpoublie a {
+        font-size: 12px;
+        align-self: flex-start;
+        margin: 5px 0px 15px 24px;
+        color: #2C7DFF;
+        text-decoration: none;
+        &:visited {color: #2C7DFF;}
+    }
+    &__btn_reveniralaconnexion a {
+        font-size: 12px;
+        align-self: flex-start;
+        margin: 5px 0px 15px 24px;
+        color: #2C7DFF;
+        text-decoration: none;
+        &:visited {color: #2C7DFF;}
+    }
+    & div {
+        width: 400px;
+        margin: 12px 25px 12px 25px;
+    }
+    & input {
+        background: rgba(221, 221, 221, 0.575);
+        color: #333333;
+        font-family: poppins;
+        margin-top: 10px;
+        border-radius: 5px;
+        padding: 10px;
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+        border: none;
+        &:focus {
+            outline: none;
+        }
+    }
+    & select {
+        font-family: poppins;
+        width: 100%;
+        height: 40px;
+        font-size: 12px;
+        border: 1px solid rgba(128, 128, 128, 0.219); 
+    }
+    &__error_iddejautilise {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        & img {margin-right: 7px;}
+    }
 }
 
-.formulaire div {
-    width: 400px;
-    margin: 12px 25px 12px 25px;
-}
-
-.formulaire input {
-    background: rgba(221, 221, 221, 0.575);
-    color: #333333;
-    font-family: poppins;
-    margin-top: 10px;
-    border-radius: 5px;
-    padding: 10px;
-    width: 100%;
-    height: auto;
-    font-size: 14px;
-    border: none;
-}
-
-.formulaire select {
-    font-family: poppins;
-    width: 100%;
-    height: 40px;
-    font-size: 12px;
-    border: 1px solid rgba(128, 128, 128, 0.219);
-}
-
-.formulaire input:focus {
-    outline: none;
-}
-
-.formulaire legend {
-    font-size: 25px;
-    margin-left: 20px;
-}
-
-.dejamembre {
-    font-size: 12px;
-    align-self: flex-start;
-    margin: 5px 0px 15px 24px;
-    color: grey;
-}
-
-.dejamembre a {
-    text-decoration: none;
-    color: #2C7DFF;
-}
-
-.dejamembre a:visited {
-    color: #2C7DFF;
-}
-
-.pasdecompte {
-    font-size: 12px;
-    align-self: flex-start;
-    margin: 5px 0px 15px 24px;
-    color: grey;
-}
-
-.pasdecompte a {
-    text-decoration: none;
-    color: #2C7DFF;
-}
-
-.pasdecompte a:visited {
-    color: #2C7DFF;
-}
-
-
-
-.illustration {
-    display: flex;
-    background: #ff2c2c;
-    width: 70%;
-    height: auto;
-}
-
-#isometric {
-    align-self: flex-end;
-    justify-self: flex-end;
-    margin-left: auto;
-}
-
-#isometric2 {
-    position: fixed;
-    margin: 50px 40px 0px 60px;
-}
-
-.id_deja_utilise {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.id_deja_utilise img {
-    margin-right: 7px;
-}
 
 .mauvais_id {
     display: flex;

@@ -24,14 +24,14 @@
         <title>Changement de mot de passe</title>
     </head>
 
-    <body>
-        <div class="header_inscription_connexion">
+    <body class="log_body">
+
             <form action="changement_mdp.php" method="post">
 
-                <fieldset class="formulaire">
+                <fieldset class="log_form">
 
                     <legend>Changer son mot de passe</legend>
-                    <p class="dejamembre"><a href="connexion.php">Revenir à la connexion</a></p>
+                    <p class="log_form__btn_reveniralaconnexion"><a href="connexion.php">Revenir à la connexion</a></p>
                     <div><label>Username : <input type="text" name="pseudo" required autocomplete="off"></label></div>
                     <input type="submit">
                     <p><?php echo $question; ?></p>
@@ -40,14 +40,7 @@
 
             </form>
 
-            <div class="illustration">
-
-                <img id="isometric" src="media/isometric.svg" alt="" width="1000">
-                <img id="isometric2" src="media/isometric2" alt="" width="400"> 
-
-            </div>
-
-        </div>
+            <?php include('include/_log_illustration.php') ?>
 
     </body>
 

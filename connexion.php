@@ -20,8 +20,9 @@
                 $_SESSION['id_user'] = $donnees['id_user'];                                             
                 header('LOCATION: index.php');                                                                
             }  
-        } else { ?>
-            <div class="mauvais_id">
+        } else { 
+            
+          ?>  <div class="mauvais_id">
                 <img src="media/error.png" alt="" width="15px" height="15px"> 
                 <p>Mauvais identifiant ou mot de passe</p> 
             </div>
@@ -41,34 +42,26 @@
         <title>Connexion</title>
     </head>
 
-    <body>
+    <body class="log_body">
 
         <!-- HTML FORMULAIRE DE CONNEXION -->
-        <div class="header_inscription_connexion">
 
             <form action="connexion.php" method="post">
 
-                <fieldset class="formulaire">
+                <fieldset class="log_form">
 
                     <legend>Se Connecter</legend>
-                    <p class="pasdecompte">Pas de compte ? <a href="inscription.php">Créer un compte</a></p>                   
+                    <p class="log_form__btn_pasdecompte">Pas de compte ? <a href="inscription.php">Créer un compte</a></p>                   
                     <div><label>User name : <input type="text" name="pseudo"  required autocomplete="off"></label></div>    
                     <div><label>Mot de passe : <input type="password" name="mdp" required autocomplete="off"></label></div>
-                    <p class="pasdecompte"><a href="changement_mdp.php">Mot de passe oublié ? </a></p>
+                    <p class="log_form__btn_mdpoublie"><a href="changement_mdp.php">Mot de passe oublié ? </a></p>
                     <input type="submit">                                                                                                         
-                        
+                    <?php echo $mauvaisid ?>    
                 </fieldset>
 
             </form>
 
-            <div class="illustration">
-
-                    <img id="isometric" src="media/isometric.svg" alt="" width="1000">
-                    <img id="isometric2" src="media/isometric2" alt="" width="400">
-                    
-            </div>
-
-        </div>
+            <?php include('include/_log_illustration.php') ?>
 
     </body>
     
