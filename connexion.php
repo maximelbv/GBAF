@@ -21,12 +21,8 @@
                 header('LOCATION: index.php');                                                                
             }  
         } else { 
-            
-          ?>  <div class="mauvais_id">
-                <img src="media/error.png" alt="" width="15px" height="15px"> 
-                <p>Mauvais identifiant ou mot de passe</p> 
-            </div>
-    <?php }
+            $mauvaisid =  "mauvais identifiant ou mot de passe"; 
+         }
                  
     } 
 
@@ -56,7 +52,11 @@
                     <div><label>Mot de passe : <input type="password" name="mdp" required autocomplete="off"></label></div>
                     <p class="log_form__btn_mdpoublie"><a href="changement_mdp.php">Mot de passe oublié ? </a></p>
                     <input type="submit">                                                                                                         
-                    <?php echo $mauvaisid ?>    
+                    <?php 
+                    if (isset($mauvaisid)) {
+                        echo $mauvaisid;
+                    }     
+                    ?>    
                 </fieldset>
 
             </form>
