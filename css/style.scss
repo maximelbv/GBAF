@@ -250,79 +250,13 @@ footer {
         justify-content: center;
         & img {margin-right: 7px;}
     }
-}
-
-
-.mauvais_id {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    margin-top: 425px;
-    margin-left: 150px;
-}
-
-.mauvais_id img {
-    margin-right: 7px;
-}
-
-@media screen and (min-width: 725px) and (max-width: 1366px) {
-    .nomDescLogo {
-        width: auto;
-    }
-
-    .logo {
-        margin-left: 20px;
-    }
-
-    #isometric {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 950px) and (max-width: 1200px) {
-
-    #isometric2 {
-        position: relative;
-        width: 80%;
-        margin: 0px;
-    }
-
-    .illustration {
+    &__error_mauvaisid {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
         justify-content: center;
+        & img {
+            margin-right: 10px;
+        }
     }
-}
-
-@media screen and (min-width: 250px) and (max-width: 950px){
-
-    .illustration {
-        display: none;
-    }
-
-    #isometric2 {
-        display: none;
-    }
-
-    .header_inscription_connexion {
-        justify-content: center;
-    }
-
-}
-
-@media screen and (min-width: 250px) and (max-width: 725px) {
-    
-    .nomDesc {
-        width: auto;
-        margin: 30px;
-    }
-
-    .nomDescLogo {
-        flex-direction: column;
-    }
-
-    .logo {
-        margin-top: 20px;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
 }

@@ -35,6 +35,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.min.css">
+        <link rel="stylesheet" media="screen and (max-width: 1366px)" href="./css/queries_1366x725.min.css" />
+        <link rel="stylesheet" media="screen and (max-width: 725px)" href="./css/queries_725x250.min.css" />
         <title>Connexion</title>
     </head>
 
@@ -51,12 +53,15 @@
                     <div><label>User name : <input type="text" name="pseudo"  required autocomplete="off"></label></div>    
                     <div><label>Mot de passe : <input type="password" name="mdp" required autocomplete="off"></label></div>
                     <p class="log_form__btn_mdpoublie"><a href="changement_mdp.php">Mot de passe oublié ? </a></p>
-                    <input type="submit">                                                                                                         
-                    <?php 
-                    if (isset($mauvaisid)) {
-                        echo $mauvaisid;
-                    }     
-                    ?>    
+                    <input type="submit">   
+                    <div class="log_form__error_mauvaisid">                                                                                                     
+                        <?php 
+                            if (isset($mauvaisid)) {
+                                echo $mauvaisid ?> <img src="media/error.png" alt="" width="15" height="15"> <?php
+                            }     
+                        ?>
+                    </div> 
+
                 </fieldset>
 
             </form>

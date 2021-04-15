@@ -285,64 +285,13 @@ footer a {
   margin-right: 7px;
 }
 
-.mauvais_id {
+.log_form__error_mauvaisid {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
-  position: absolute;
-  margin-top: 425px;
-  margin-left: 150px;
+  justify-content: center;
 }
 
-.mauvais_id img {
-  margin-right: 7px;
-}
-
-@media screen and (min-width: 725px) and (max-width: 1366px) {
-  .nomDescLogo {
-    width: auto;
-  }
-  .logo {
-    margin-left: 20px;
-  }
-  #isometric {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 950px) and (max-width: 1200px) {
-  #isometric2 {
-    position: relative;
-    width: 80%;
-    margin: 0px;
-  }
-  .illustration {
-    justify-content: center;
-  }
-}
-
-@media screen and (min-width: 250px) and (max-width: 950px) {
-  .illustration {
-    display: none;
-  }
-  #isometric2 {
-    display: none;
-  }
-  .header_inscription_connexion {
-    justify-content: center;
-  }
-}
-
-@media screen and (min-width: 250px) and (max-width: 725px) {
-  .nomDesc {
-    width: auto;
-    margin: 30px;
-  }
-  .nomDescLogo {
-    flex-direction: column;
-  }
-  .logo {
-    margin-top: 20px;
-    margin-left: 0px;
-    margin-right: 0px;
-  }
+.log_form__error_mauvaisid img {
+  margin-right: 10px;
 }
