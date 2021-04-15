@@ -75,7 +75,7 @@
 
             <form method="post">
 
-                <input type="text" name="commentaire" id="commentaire" autocomplete="off">
+                <input type="textarea" name="commentaire" id="commentaire" autocomplete="off">
                 <input type="submit">
                 
             </form>

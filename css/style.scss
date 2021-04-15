@@ -8,13 +8,7 @@ body {
     font-family: Poppins;
 }
 
-/* INCLUDES */
-
-/* header */
-
-
-
-
+// INCLUDES 
 
 .header {
     display: flex;
@@ -24,114 +18,18 @@ body {
     &__logo_gbaf {
         margin: 17px 0px 0px 50px;
     }
-    &__test {
-        margin-right: auto;
+    &__compte {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        padding-right: 20px;
+        & * {
+            padding: 3px;
+        }
     }
  }
-
-
-
-#acteur {
-    padding: 0px;
-}
-
-.connexion {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    width: 100%;
-    padding-right: 20px;
-}
-
-.connexion * {
-    padding: 3px;
-}
-
-.presentation {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2% 4% 2% 4%;
-    text-align: center;
-    font-size: 12px;
-    color: rgb(44, 44, 44);
-}
-
-.txt_presentation {   
-    font-size: large;
-    align-self: center;
-}
-
-.txt_presentation p {
-    margin: 50px 0px 50px 0px;
-    width: auto;
-    font-size: 16px;
-}
-
-
-
-#arrow {
-    width: 35px;
-    background: red;
-    border-radius: 50px;
-
-}
-
-
-.txt_partenaires {
-    padding-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.informations {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: -7px 7px 25px 0px rgba(128, 128, 128, 0.418);
-    height: auto;
-    margin: 50px;
-    padding: 0px;
-}
-
-.logo {
-    align-self: center;
-    justify-self: center;
-    width: 200px;
-    height: auto;
-}
-
-.nomDescLogo {
-    width: 95%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
-
-.nomDesc {
-    width: 70%;
-    margin: 20px 20px 20px 60px;
-}
-
-
-
-.lirelasuite {
-    align-self: flex-end;
-    margin-bottom: 25px;
-    margin-right: 30px;
-    text-decoration: none;
-    color: white;
-    padding: 10px 20px 10px 20px;
-    background: red;
-    border-radius: 20px;
-}
-
-.lirelasuite:visited {
-    color: white;
-}
 
 footer {
     width: 100%;
@@ -141,15 +39,82 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    & p {
+        margin: 0px 10px 0px 10px;
+        color: rgb(223, 223, 223);
+    }
+    & a {
+        text-decoration: none;
+    }
 }
 
-footer p {
-    margin: 0px 10px 0px 10px;
-    color: rgb(223, 223, 223);
+// INDEX
+
+.index_presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2% 4% 2% 4%;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(44, 44, 44);
+    &__txt {   
+        font-size: large;
+        align-self: center;
+        & p {
+        margin: 50px 0px 50px 0px;
+        width: auto;
+        font-size: 16px;
+        }
+    }
 }
 
-footer a {
-    text-decoration: none;
+.index_acteurs {
+    &__txt {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        &__btn {
+            width: 35px;
+            background: red;
+            border-radius: 50px;
+        }
+    }
+    &__liste {
+        &__elem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: -7px 7px 25px 0px rgba(128, 128, 128, 0.418);
+            height: auto;
+            margin: 50px;
+            &__informations {
+                width: 95%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                & img {
+                    margin-right: 60px;
+                    align-self: center;
+                    justify-self: center;
+                    width: 200px;
+                    height: auto;
+                }
+            }
+            &__btn_suite {
+                align-self: flex-end;
+                margin-bottom: 25px;
+                margin-right: 30px;
+                text-decoration: none;
+                color: white;
+                padding: 10px 20px 10px 20px;
+                background: red;
+                border-radius: 20px;
+            }
+        }
+    }
 }
 
 
@@ -369,6 +334,7 @@ footer a {
     .logo {
         margin-top: 20px;
         margin-left: 0px;
+        margin-right: 0px;
     }
 
 }

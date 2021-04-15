@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Votre compte a bien été créée, vous allez être redirigé vers la page de connexion.</h1>
+    <h1>Votre compte a bien été créé, vous allez être redirigé vers la page de connexion.</h1>
     <?php
         header("Refresh:5; url=http://localhost/Formation/GBAF/connexion.php");
     ?>

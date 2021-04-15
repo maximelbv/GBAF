@@ -19,9 +19,9 @@
         
         <?php include("./include/_header.php"); ?>    
 
-        <section class="presentation">
+        <section class="index_presentation">
 
-            <div class="txt_presentation">
+            <div class="index_presentation__txt">
 
                 <h1> GBAF (Groupement Banque Assurance Français) </h1>
                 <p>
@@ -40,31 +40,31 @@
 
             </div>
 
-            <img class="img_presentation" src="media/teamwork.png" alt="">
+            <img src="media/teamwork.png" alt="">
               
         </section>
 
 
-        <section id="acteurs">
+        <section class="index_acteurs">
 
-            <div class="txt_partenaires">
+            <div class="index_acteurs__txt">
 
                 <h2> Découvrez les acteurs et pârtenaires du GBAF </h2>
-                <a href="#acteur"><img id='arrow' src="media/arrow.png" alt=""></a>
+                <a href="#acteur"><img class="index_acteurs__txt__btn" src="media/arrow.png" alt=""></a>
 
             </div>
 
-            <ul id="acteur">
+            <ul id="index_acteurs__liste">
                 <?php 
                 $reponse = $bdd->query('SELECT * FROM acteurs');
                 while ($donnees = $reponse->fetch()) :   
                 ?>
                     
-                <li class='informations'>
+                <li class='index_acteurs__liste__elem'>
                             
-                    <div class="nomDescLogo">
+                    <div class="index_acteurs__liste__elem__informations">
 
-                        <img class="logo" src="<?php echo $donnees['logo'] ?>" alt="">
+                        <img src="<?php echo $donnees['logo'] ?>" alt="">
 
                         <div class='nomDesc'> 
 
@@ -81,7 +81,7 @@
 
                     </div>
 
-                    <a class='lirelasuite' href="acteur.php?id=<?php echo $donnees['id_acteur']?>">lire la suite</a>
+                    <a class='index_acteurs__liste__elem__btn_suite' href="acteur.php?id=<?php echo $donnees['id_acteur']?>">lire la suite</a>
 
                 </li>
                         
