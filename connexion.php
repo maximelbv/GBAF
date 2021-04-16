@@ -17,7 +17,9 @@
                 $_SESSION['username'] = $donnees['username'];   
                 $_SESSION['prenom'] = $donnees['prenom'];
                 $_SESSION['nom'] = $donnees['nom']; 
-                $_SESSION['id_user'] = $donnees['id_user'];                                             
+                $_SESSION['id_user'] = $donnees['id_user'];      
+                $_SESSION['question'] = $donnees['question'];
+                $_SESSION['reponse'] = $donnees['reponse'];                                       
                 header('LOCATION: index.php');                                                                
             }  
         } else { 

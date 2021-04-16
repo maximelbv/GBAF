@@ -1,6 +1,7 @@
 <?php 
     include('./include/_bdd_call.php');
     $question = null;
+    
     if (isset($_POST['pseudo'])) {
         $reponse = $bdd->query('SELECT * FROM account WHERE username="'.$_POST["pseudo"].'"')->fetchAll()[0];
         if (!empty($reponse)) {
@@ -8,7 +9,7 @@
             $_SESSION['question'] = $reponse['question'];
             $question = $reponse['question'];
         } else {
-            echo "non";
+            $dontexist = "Cet username n'existe pas.";
         }
     }
 ?>
@@ -26,9 +27,19 @@
 
                     <legend>Changer son mot de passe</legend>
                     <p class="log_form__btn_reveniralaconnexion"><a href="connexion.php">Revenir à la connexion</a></p>
-                    <div><label>Username : <input type="text" name="pseudo" required autocomplete="off"></label></div>
+                    <div><label>Username : <input type="text" name="pseudo" required autocomplete="off"disabled="disabled"></label></div>
                     <input type="submit">
-                    <p><?php echo $question; ?></p>
+                    <?php
+                        if (!empty($reponse)) {
+                            include('include/_question.php');
+                        } else if (isset($dontexist)) {
+                            echo $dontexist;
+                        }
+                        
+                        if ($reponse['reponse'] == $reponse['question']) {
+                            echo "ok";
+                        }
+                    ?>
 
                 </fieldset>
 
