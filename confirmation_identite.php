@@ -16,6 +16,7 @@
             <fieldset class="log_form">
                 <legend>Veuillez confirmer votre identité</legend>
                 <div><label><?php echo $_SESSION['question'] ?> <input type="text" name="reponse" autocomplete="off"></label></div>
+                <div><input type="submit" value="Confirmer mon identité"></div>
                 <?php if (isset($_POST['reponse'])) {
                     if ($_POST['reponse'] == $_SESSION['reponse']) {
                         header('Location: compte.php');
