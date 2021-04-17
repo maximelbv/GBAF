@@ -21,10 +21,12 @@
                 $_SESSION['question'] = $donnees['question'];
                 $_SESSION['reponse'] = $donnees['reponse'];                                       
                 header('LOCATION: index.php');                                                                
-            }  
+            } else { 
+                $mauvaisid =  "mauvais identifiant ou mot de passe"; 
+            }
         } else { 
             $mauvaisid =  "mauvais identifiant ou mot de passe"; 
-         }
+        }
                  
     } 
 
