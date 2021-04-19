@@ -44,7 +44,7 @@ body {
 footer {
   width: 100%;
   height: 100px;
-  background: rgba(44, 44, 44, 0.795);
+  background: #2c2c2c;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -179,7 +179,7 @@ footer a {
 .log_form {
   margin: 75px 100px 0px 100px;
   border: none;
-  color: #333333;
+  color: #2c2c2c;
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -255,7 +255,7 @@ footer a {
 
 .log_form input {
   background: rgba(221, 221, 221, 0.575);
-  color: #333333;
+  color: #2c2c2c;
   font-family: poppins;
   margin-top: 10px;
   border-radius: 5px;
@@ -305,7 +305,7 @@ footer a {
   background-position: 100% 100%;
   background-size: 40%;
   background-repeat: no-repeat;
-  color: #363636;
+  color: #2c2c2c;
   width: auto;
   height: 875px;
   display: flex;
