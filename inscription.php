@@ -10,7 +10,7 @@
 
                 <fieldset class="log_form">
 
-                    <legend>S'inscrire</legend>
+                    <legend>Inscription</legend>
 
                     <p class="log_form__btn_dejamembre">Déjà membre ? <a href="connexion.php">Se connecter</a></p>
                 
@@ -22,17 +22,7 @@
 
                     <div> <label>Mot de passe : <input type="password" name="password" required autocomplete="off"></label> </div>
 
-                    <div>
-                        <label>Question secrète : 
-                            <select name="question_secrete">
-                                <option value="choix" disabled>--Choisissez une option--</option>
-                                <option value="Dans quelle ville êtes-vous né ?">Dans quelle ville êtes-vous né ?</option>
-                                <option value="Quel est votre film favori ?">Quel est votre film favori ?</option>
-                                <option value="Quelle est votre couleur favorite ?">Quelle est votre couleur favorite ?</option>
-                                <option value="Quel est le prénom de votre grand-mère maternelle ?">Quel est le prénom de votre grand-mère maternelle ?</option>
-                            </select>    
-                        </label>
-                    </div>
+                    <div><label>Question secrète : <input type="text" name="question_secrete" required autocomplete="off"></input></label></div>
 
                     <div> <label>Réponse à la question secrète : <input type="text" name="reponse_secrete" required autocomplete="off"></label> </div>
 

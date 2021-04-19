@@ -9,7 +9,7 @@
 
     <?php include('include/_head.php') ?>
 
-    <body>
+    <body class="body_compte">
         <?php include('include/_header.php') ?>
 
 
@@ -23,6 +23,8 @@
                 <div><label>Changer son nom : <input type="text" name="nv_nom" autocomplete="off" placeholder ="<?php echo $_SESSION['nom'] ?>"></label></div>
                 <div><label>Changer son username : <input type="text" name="nv_username" autocomplete="off" placeholder ="<?php echo $_SESSION['username'] ?>"></label></div>
                 <div><label>Changer son mot de passe : <input type="password" autocomplete="off" name="nv_password"></label></div>
+                <div><label>Changer sa question secrète : <input type="text" name="nv_question" autocomplete="off" placeholder ="<?php echo $_SESSION['question'] ?>"></label></div>
+                <div><label>Changer sa réponse secrète : <input type="text" name="nv_reponse" autocomplete="off"></label></div>
                 <div><input type="submit" value="Envoyer"></div>
 
                 <?php
@@ -55,6 +57,18 @@
                         $change->execute([$pass_hash, $_SESSION['id_user']]);
                         header('Location: redirection_changement_infos.php');
                         $_SESSION['password'] = $_POST['nv_password'];
+                    }
+                    if (!empty($_POST['nv_question']) && isset($_POST['nv_question'])) {
+                        $change = $bdd->prepare('UPDATE account SET question = ? WHERE id_user = ?');
+                        $change->execute([$_POST['nv_question'], $_SESSION['id_user']]);
+                        header('Location: redirection_changement_infos.php');
+                        $_SESSION['question'] = $_POST['nv_question'];
+                    }
+                    if (!empty($_POST['nv_reponse']) && isset($_POST['nv_reponse'])) {
+                        $change = $bdd->prepare('UPDATE account SET reponse = ? WHERE id_user = ?');
+                        $change->execute([$_POST['nv_reponse'], $_SESSION['id_user']]);
+                        header('Location: redirection_changement_infos.php');
+                        $_SESSION['reponse'] = $_POST['nv_reponse'];
                     }
                         
                 ?>

@@ -30,7 +30,7 @@
                     <legend>Changer son mot de passe</legend>
                     <p class="log_form__btn_reveniralaconnexion"><a href="connexion.php">Revenir à la connexion</a></p>
                     <div><label>Username : <input type="text" name="pseudo" required autocomplete="off"></label></div>
-                    <input type="submit">
+                    <div><input type="submit" value="Valider"></div>
                     <?php
                         if (isset($_POST['pseudo'])) {
                             echo $dontexist = "Cet username n'existe pas.";

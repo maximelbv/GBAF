@@ -183,6 +183,33 @@ footer {
     & legend {
         font-size: 25px;
         margin-left: 20px;
+    }    
+    & div {
+        width: 400px;
+        margin: 12px 25px 12px 25px;
+    }
+    & input {
+        background: rgba(221, 221, 221, 0.575);
+        color: $txt_color;
+        font-family: poppins;
+        margin-top: 10px;
+        border-radius: 5px;
+        padding: 10px;
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+        border: none;
+        &:focus {
+            outline: none;
+        }
+    }
+    & input[type=submit] {
+        background-image: linear-gradient(to right top, #097ebb, #0983c2, #0988ca, #098dd1, #0992d9);
+        color: white;
+    }
+    & input[type=reset] {
+        background: #FF2C2C;
+        color: white;
     }
     &__btn_dejamembre {
         font-size: 12px;
@@ -222,32 +249,7 @@ footer {
         text-decoration: none;
         &:visited {color: #2C7DFF;}
     }
-    & div {
-        width: 400px;
-        margin: 12px 25px 12px 25px;
-    }
-    & input {
-        background: rgba(221, 221, 221, 0.575);
-        color: $txt_color;
-        font-family: poppins;
-        margin-top: 10px;
-        border-radius: 5px;
-        padding: 10px;
-        width: 100%;
-        height: auto;
-        font-size: 14px;
-        border: none;
-        &:focus {
-            outline: none;
-        }
-    }
-    & select {
-        font-family: poppins;
-        width: 100%;
-        height: 40px;
-        font-size: 12px;
-        border: 1px solid rgba(128, 128, 128, 0.219); 
-    }
+
     &__error_iddejautilise {
         display: flex;
         flex-direction: row;
@@ -284,3 +286,12 @@ footer {
     margin-top: 100px;
 }
 
+// COMPTE.PHP
+
+.body_compte {
+    background: url('../media/security.svg');
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+    background-position-y: 40%;
+    background-size: 900px;
+}

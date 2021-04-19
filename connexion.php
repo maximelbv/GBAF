@@ -45,12 +45,12 @@
 
                 <fieldset class="log_form">
 
-                    <legend>Se Connecter</legend>
+                    <legend>Connexion</legend>
                     <p class="log_form__btn_pasdecompte">Pas de compte ? <a href="inscription.php">Créer un compte</a></p>                   
                     <div><label>User name : <input type="text" name="pseudo"  required autocomplete="off"></label></div>    
                     <div><label>Mot de passe : <input type="password" name="mdp" required autocomplete="off"></label></div>
                     <p class="log_form__btn_mdpoublie"><a href="changement_mdp.php">Mot de passe oublié ? </a></p>
-                    <input type="submit">   
+                    <div><input type="submit" value="Se connecter"></div>   
                     <div class="log_form__error_mauvaisid">                                                                                                     
                         <?php 
                             if (isset($mauvaisid)) {
