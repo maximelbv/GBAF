@@ -5,5 +5,3 @@
         <link rel="stylesheet" href="css/style.min.css">
         <link rel="stylesheet" href="./css/queries_1366x725.min.css" />
         <link rel="stylesheet" href="./css/queries_725x250.min.css" />
-        <title>GBAF</title>       
-</head>

@@ -3,6 +3,8 @@
 <html lang="fr">
 
     <?php include('include/_head.php') ?>
+        <title>GBAF - Inscription</title>       
+    </head>
 
     <body class="log_body">
         

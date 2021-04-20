@@ -36,6 +36,8 @@
 <html lang="fr">
     
     <?php include('include/_head.php') ?>
+        <title>GBAF - Connexion</title>       
+    </head>
 
     <body class="log_body">
 

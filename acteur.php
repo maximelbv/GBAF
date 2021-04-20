@@ -4,18 +4,19 @@
 <html lang="fr">
 
     <?php include('include/_head.php') ?>
+        <title>GBAF - Acteur <?php echo $_GET['id'] ?></title>       
+    </head>
 
     <body>
-
+        
         <?php 
-
+            
             include('./include/_bdd_call.php');
             include("./include/_header.php");
 
             $reponse = $bdd->prepare('SELECT * FROM acteurs WHERE id_acteur=?');
             $reponse->execute(array($_GET['id']));
-            $donnees = $reponse->fetch();     
-
+            $donnees = $reponse->fetch(); 
         ?> 
 
         <article class="acteur_presentation">

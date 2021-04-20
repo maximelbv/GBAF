@@ -8,6 +8,8 @@
 <html lang="fr">
 
     <?php include('include/_head.php') ?>
+        <title>GBAF - Mon compte</title>       
+    </head>
 
     <body class="body_compte">
         <?php include('include/_header.php') ?>

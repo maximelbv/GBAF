@@ -7,6 +7,8 @@
 <html lang="en">
 
     <?php include('include/_head.php');?>
+        <title>GBAF - Changer son mot de passe</title>       
+    </head>
 
     <body class="log_body">
 

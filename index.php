@@ -9,6 +9,8 @@
 <html lang="fr">
     
     <?php include('include/_head.php') ?>
+        <title>GBAF - Accueil</title>       
+    </head>
 
     <body>
         
