@@ -70,7 +70,6 @@
                         header('Location: redirection_changement_infos.php');
                         $_SESSION['reponse'] = $_POST['nv_reponse'];
                     }
-                        
                 ?>
                         
             </fieldset>

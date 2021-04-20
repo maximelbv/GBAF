@@ -7,6 +7,7 @@
         if (count($isUsername) != 0) {
             session_start();    
             $donnees = $isUsername[0];
+            $_SESSION['id_user'] = $donnees['id_user'];
             $_SESSION['question'] = $donnees['question'];
             $_SESSION['reponse'] = $donnees['reponse'];
             header('Location: changement_mdp_reponse.php'); 
