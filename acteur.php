@@ -32,20 +32,18 @@
 
             <h1>Commentaires</h1>
 
-            <!-- <div class="header_com">
-                <p>X commentaires</p>
-                <input type="button" value="Nouveau commentaire">
-            </div> -->
+            <div class="header_com">
+                <?php $nb_post = $bdd->query('SELECT post FROM post')->fetchAll();?>
+                <p><?php echo count($nb_post) ?> commentaires</p>
+            </div>
 
             <?php
-
                 if (isset($_POST['commentaire']) && !empty($_POST['commentaire'])) {
 
                     $create = $bdd->prepare('INSERT INTO post(post, id_user,id_acteur) VALUES(?,?,?)');
                     $create->execute(array($_POST['commentaire'], $_SESSION['id_user'],$_GET['id']));
-                        
+                    header('Location: '.$_SERVER[REQUEST_URI].'');
                 }
-                    
             ?>
 
             <div class="liste_commentaires">
@@ -65,7 +63,7 @@
                     } 
 
                 ?>
-
+                
             </div>
 
             <form method="post">
