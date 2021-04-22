@@ -144,7 +144,31 @@ footer {
 
 .acteur_commentaires {
     padding: 0px 100px 100px 100px;
+    &__header_com {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+            &__like {
+                background: url('../media/like.png');
+                background-repeat: no-repeat;
+                background-position: 50%;
+                padding: 25px;
+                cursor: pointer;
+                border: none;
+            }
+            &__dislike {
+                background: url('../media/dislike.png');
+                background-repeat: no-repeat;
+                background-position: 50%;
+                padding: 25px;
+                cursor: pointer;
+                border: none;
+                margin-left: 10px;
+            }
+    }
 }
+
 
 /* LOG PAGES (INSCRIPTION.PHP / CONNEXION.PHP / CHANGEMENT_MDP.PHP) */
 

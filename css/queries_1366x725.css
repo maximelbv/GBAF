@@ -8,4 +8,7 @@
   .body_redirection {
     background-image: none;
   }
+  .log_form {
+    margin: 0px;
+  }
 }
