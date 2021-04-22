@@ -38,21 +38,21 @@
                 <h1><?php echo count($nb_post) ?> Commentaires</h1>
 
                 <form class="acteur_commentaires__header_com__vote" method="post">
-                    <input type="submit" class="acteur_commentaires__header_com__like" name="like" value="">
-                    <input type="submit" class="acteur_commentaires__header_com__dislike" name="dislike" value="">
+                    <input type="submit" class="acteur_commentaires__header_com__like" name="like" value=" ">
+                    <input type="submit" class="acteur_commentaires__header_com__dislike" name="dislike" value=" ">
                 </form>
 
                     <?php
-                        $voteJoin = $bdd->query('SELECT v.* FROM vote as v LEFT JOIN account as a ON v.id_user = a.id_user WHERE a.id_user = '.$_SESSION['id_user'].'')->fetchAll();
-                        print_r($voteJoin);
+        
+                        $vote = $bdd->query('SELECT v.* FROM vote as v LEFT JOIN account as a ON v.id_user = a.id_user WHERE a.id_user = '.$_SESSION['id_user'].'')->fetchAll();
                         
-                        
-                        if (!empty($_POST['like']) && isset($_POST['like']) && !isset($_SESSION['id_user'])) { 
-                            $like = $bdd->prepare('INSERT INTO vote (id_user, vote) VALUES (?,?)');   
-                            $test = $like->execute([$_SESSION['id_user'], 1]);
-                        } else if (!empty($_POST['dislike']) && isset($_POST['dislike']) && !isset($_SESSION['id_user'])) {
-                            $test = $like->execute([$_SESSION['id_user'], 2]);
-                        }
+                            $like = $bdd->prepare('INSERT INTO vote (id_user, vote) VALUES (?,?)');
+                            if (!empty($_POST['like']) && isset($_POST['like'])) {            
+                                $test = $like->execute([$_SESSION['id_user'], 1]);
+                            } else if (!empty($_POST['dislike']) && isset($_POST['dislike'])) {
+                                $test = $like->execute([$_SESSION['id_user'], 0]);
+                            }
+                               
                     ?>
                
             </div>
