@@ -47,13 +47,13 @@
 
                 <fieldset class="log_form">
 
-                    <legend>Connexion</legend>
-                    <p class="log_form__btn_pasdecompte">Pas de compte ? <a href="inscription.php">Créer un compte</a></p>                   
+                    <div><legend>Connexion</legend></div>
+                    <div><p class="log_form__btn_changemenu">Pas de compte ? <a href="inscription.php">Créer un compte</a></p></div>                  
                     <div><label>User name : <input type="text" name="pseudo"  required autocomplete="off"></label></div>    
                     <div><label>Mot de passe : <input type="password" name="mdp" required autocomplete="off"></label></div>
-                    <p class="log_form__btn_mdpoublie"><a href="changement_mdp.php">Mot de passe oublié ? </a></p>
+                    <p class="log_form__btn_changemenu"><a href="changement_mdp.php">Mot de passe oublié ? </a></p>
                     <div><input type="submit" value="Se connecter"></div>   
-                    <div class="log_form__error_mauvaisid">                                                                                                     
+                    <div class="log_form__error_reverse">                                                                                                     
                         <?php 
                             if (isset($mauvaisid)) {
                                 echo $mauvaisid ?> <img src="media/error.png" alt="" width="15" height="15"> <?php

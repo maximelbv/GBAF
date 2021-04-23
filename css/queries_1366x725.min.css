@@ -1,1 +1,1 @@
-@media screen and (min-width: 725px) and (max-width: 1366px){.log_body__illustration__isometric2{display:none}.acteur_presentation__logo{width:80%}.body_redirection{background-image:none}.log_form{margin:0px}}
+@media screen and (min-width: 725px) and (max-width: 1366px){.log_body__illustration__isometric2{display:none}.acteur_presentation__logo{width:80%}.body_redirection{background-image:none}.log_body{flex-direction:column}.log_form{justify-self:center;margin:20px}.log_form div{width:80%}.log_body__illustration{width:100%}.body_compte{background:none}}

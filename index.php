@@ -1,20 +1,20 @@
 <?php  
-    session_start();
-    if (!isset ($_SESSION['username'])) {
-        include('include/_redirection.php');
+    session_start();    // la session débute                                
+    if (!isset ($_SESSION['username'])) {   //si la variable 'username' de la session n'est pas définie
+        include('include/_redirection.php');    // inclus le code de 'redirection.php' (qui renvoie vers la page de connexion)
     }
-    include("./include/_bdd_call.php");    
+    include("./include/_bdd_call.php");     // appel à la base de données
 ?>
 <!DOCTYPE html>
 <html lang="fr">
     
-    <?php include('include/_head.php') ?>
+    <?php include('include/_head.php') ?>  <!-- Inclut la première partie de la balise <head> -->
         <title>GBAF - Accueil</title>       
     </head>
 
     <body>
         
-        <?php include("./include/_header.php"); ?>    
+        <?php include("./include/_header.php"); ?>    <!-- Inclut le header -->
 
         <section class="index_presentation">
 
@@ -47,30 +47,31 @@
             <div class="index_acteurs__txt">
 
                 <h2> Découvrez les acteurs et pârtenaires du GBAF </h2>
-                <a href="#acteur"><img class="index_acteurs__txt__btn" src="media/arrow.png" alt=""></a>
+                <img class="index_acteurs__txt__btn" src="media/arrow.png" alt="">
 
             </div>
 
             <ul class="index_acteurs__liste">
+
                 <?php 
-                $reponse = $bdd->query('SELECT * FROM acteurs');
-                while ($donnees = $reponse->fetch()) :   
+                $reponse = $bdd->query('SELECT * FROM acteurs');    // sélectionne * dans la table acteur et stock le dans la variable $reponse
+                while ($donnees = $reponse->fetch()) :      // tant que la ligne dans la table acteur est récupérée
                 ?>
                     
                 <li class='index_acteurs__liste__elem'>
                             
                     <div class="index_acteurs__liste__elem__informations">
 
-                        <img src="<?php echo $donnees['logo'] ?>" alt="">
+                         <img src="<?php echo $donnees['logo'] ?>" alt=""> <!--  affiche le logo  -->
 
                         <div class='nomDesc'> 
 
-                            <h3><?php echo $donnees['acteur'] ?></h3>
+                            <h3><?php echo $donnees['acteur'] ?></h3>   <!--  affiche le nom de l'acteur  -->
 
                             <p>
                                 <?php 
-                                    $apercu = substr($donnees['description'], 0, 150);
-                                    echo $apercu . '...';
+                                    $apercu = substr($donnees['description'], 0, 150);   // modifie le nombre maximum de caractères dans la string contenue dans 'description' et stock la dans $apercu
+                                    echo $apercu . '...';   // affiche la donnée modifiée puis "..."
                                 ?>        
                             </p>
 
@@ -78,7 +79,7 @@
 
                     </div>
 
-                    <a class='index_acteurs__liste__elem__btn_suite' href="acteur.php?id=<?php echo $donnees['id_acteur']?>">lire la suite</a>
+                    <a class='index_acteurs__liste__elem__btn_suite' href="acteur.php?id=<?php echo $donnees['id_acteur']?>">lire la suite</a>      <!-- Lien vers la page de l'acteur sélectionné -->
 
                 </li>
                         
@@ -90,7 +91,7 @@
 
         </section>
         
-        <?php include("./include/_footer.php"); ?>
+        <?php include("./include/_footer.php"); ?>      <!-- Inclut le footer -->
         
     </body>
     

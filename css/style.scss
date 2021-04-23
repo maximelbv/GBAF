@@ -196,17 +196,18 @@ footer {
 }
 
 .log_form {
-    margin: 75px 100px 0px 100px ;
+    // margin: 75px 100px 0px 100px ;
     border: none;
     color: $txt_color;
-    width: 400px;
+    width: 600px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     & legend {
         font-size: 25px;
-        margin-left: 20px;
+        padding: 0;
     }    
     & div {
         width: 400px;
@@ -235,53 +236,26 @@ footer {
         background: #FF2C2C;
         color: white;
     }
-    &__btn_dejamembre {
+    &__btn_changemenu {
         font-size: 12px;
-        align-self: flex-start;
-        margin: 5px 0px 15px 24px;
+        align-self: center;
         color: grey;
-        & a {
-            text-decoration: none;
-            color: #2C7DFF;
-            &:visited {color: #2C7DFF;}
-        }
-    }
-    &__btn_pasdecompte {
-        font-size: 12px;
-        align-self: flex-start;
-        margin: 5px 0px 15px 24px;
-        color: grey;
+        margin: 0;
         & a {
             text-decoration: none;
             color: #2C7DFF;
             &:visited {color: #2C7DFF;}
         } 
     }
-    &__btn_mdpoublie a {
-        font-size: 12px;
-        align-self: flex-start;
-        margin: 5px 0px 15px 24px;
-        color: #2C7DFF;
-        text-decoration: none;
-        &:visited {color: #2C7DFF;}
-    }
-    &__btn_reveniralaconnexion a {
-        font-size: 12px;
-        align-self: flex-start;
-        margin: 5px 0px 15px 24px;
-        color: #2C7DFF;
-        text-decoration: none;
-        &:visited {color: #2C7DFF;}
-    }
 
-    &__error_iddejautilise {
+    &__error {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         & img {margin-right: 7px;}
     }
-    &__error_mauvaisid {
+    &__error_reverse {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;

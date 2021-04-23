@@ -12,7 +12,20 @@
     .body_redirection {
         background-image: none;
     }
+    .log_body {
+        flex-direction: column;
+    }
     .log_form {
-        margin: 0px;
+        justify-self: center;
+        margin: 20px;
+        & div {
+            width: 80%;
+        }
+    }
+    .log_body__illustration {
+        width: 100%;
+    }
+    .body_compte {
+        background: none;
     }
 }

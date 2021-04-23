@@ -12,9 +12,9 @@
 
                 <fieldset class="log_form">
 
-                    <legend>Inscription</legend>
+                    <div><legend>Inscription</legend></div>
 
-                    <p class="log_form__btn_dejamembre">Déjà membre ? <a href="connexion.php">Se connecter</a></p>
+                    <div><p class="log_form__btn_changemenu">Déjà membre ? <a href="connexion.php">Se connecter</a></p></div>
                 
                     <div> <label>Nom : <input type="text" name="nom" required autocomplete="off" placeholder="Doe"></label> </div>
 
@@ -50,7 +50,7 @@
                                     $reponse->execute(array($_POST['nom'], $_POST['prenom'], $_POST['username'], $pass_hash, $_POST['question_secrete'], $_POST['reponse_secrete'])); // execute les entrées du formulaire en tant que valeurs pour les données demandées dans $reponse et inclut les dans la bdd   
                                     header('Location: redirection_nv_compte.php');      
                             } else { ?>   
-                                <div class="log_form__error_iddejautilise">
+                                <div class="log_form__error">
                                     <img src="media/error.png" alt="" width="15" height="15"> 
                                     <p>identifiant déjà utilisé</p> 
                                 </div>

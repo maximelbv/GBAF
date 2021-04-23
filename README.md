@@ -26,7 +26,7 @@ This project is the last exercise of my training. It aims to train me in PHP and
 <h3>General</h3>
 
 ✅ HTML5 / CSS3 structure </br>
-✅ Responsive </br>
+⬛ Responsive </br>
 ✅ PHP / SQL for interactions between the site and the database.</br></br>
 
 <h3>Login / Logout</h3>
@@ -34,7 +34,7 @@ This project is the last exercise of my training. It aims to train me in PHP and
 ✅ Login required to access site information through a UserName and a Password.</br>
 ⬛ When the page loads, the UserName and Password fields take the entire width of the screen, between the header and the footer.</br>
 ✅ At the first connection, the user can create his account via a page registration.</br>
-⬛ The user can modify their personal information at any time via the "Account settings" page.</br>
+✅ The user can modify their personal information at any time via the "Account settings" page.</br>
 ✅ Required fields on the registration page:</br>
     <ul>
         <li> Name</li>
@@ -44,7 +44,7 @@ This project is the last exercise of my training. It aims to train me in PHP and
         <li> Secret question</li>
         <li> Answer to the secret question</li>
     </ul> </br>
-⬛ If the user forgets his password, he can enter his UserName and answer the secret question to create a new one.</br>
+✅ If the user forgets his password, he can enter his UserName and answer the secret question to create a new one.</br>
 ✅ When the user is logged in, his name and first name are indicated in the header on all pages.</br>
 ✅ A button "Disconnect" is present in the header.</br>
 ✅ If the user is logged out, he is automatically redirected to the first page for a new connection via an UserName and a Password..</br></br>
@@ -86,9 +86,9 @@ This project is the last exercise of my training. It aims to train me in PHP and
 ✅ Media queries for the index page</br>
 ✅ Styling the login and register pages</br>
 ⬛ Register form : REGEX</br>
-⬛ Password lost page</br>
+✅ Password lost page</br>
 ⬛ Styling and add responsive to the single actor page </br>
-⬛ Comment section in the single actor pages</br>
+✅ Comment section in the single actor pages</br>
 ⬛ Like section in the single actor pages</br>
 ⬛ Securing the forms</br>
 ⬛ Securing the url access</br>
