@@ -38,22 +38,44 @@
                 <h1><?php echo count($nb_post) ?> Commentaires</h1>
 
                 <form class="acteur_commentaires__header_com__vote" method="post">
+                    <?php 
+                        $countLikes = $bdd->query('SELECT vote FROM vote WHERE vote = 1 AND id_acteur = '.$_GET['id'].'')->fetchAll();
+                        $countDislikes = $bdd->query('SELECT vote FROM vote WHERE vote = 0 AND id_acteur = '.$_GET['id'].'')->fetchAll();
+                    ?>
                     <input type="submit" class="acteur_commentaires__header_com__like" name="like" value=" ">
+                    <p><?php echo count($countLikes) ?></p>
                     <input type="submit" class="acteur_commentaires__header_com__dislike" name="dislike" value=" ">
+                    <p><?php echo count($countDislikes) ?></p>
                 </form>
 
                     <?php
                         
                         $vote = $bdd->query('SELECT v.* FROM vote as v LEFT JOIN account as a ON v.id_user = a.id_user WHERE a.id_user = '.$_SESSION['id_user'].'')->fetchAll();
-                        $alreadyVoted = $bdd->query('SELECT EXISTS (SELECT id_user FROM vote WHERE id_user='.$_SESSION['id_user'].')');
-                        if (empty($alreadyVoted)) {
-                            $like = $bdd->prepare('INSERT INTO vote (id_user, id_acteur, vote) VALUES (?,?,?)');
-                            if (!empty($_POST['like']) && isset($_POST['like'])) {            
+                        $alreadyVoted = $bdd->query('SELECT id_user FROM vote WHERE EXISTS(SELECT id_user FROM vote WHERE id_user='.$_SESSION['id_user'].' AND id_acteur='.$_GET['id'].')')->fetchAll();
+                        
+                        
+                        $like = $bdd->prepare('INSERT INTO vote (id_user, id_acteur, vote) VALUES (?,?,?)');
+                        if (!empty($_POST['like']) && isset($_POST['like'])) {
+                            if (empty($alreadyVoted)) {
+                                header('Location: '.$_SERVER[REQUEST_URI].'');      
                                 $test = $like->execute([$_SESSION['id_user'], $_GET['id'], 1]);
-                            } else if (!empty($_POST['dislike']) && isset($_POST['dislike'])) {
-                                $test = $like->execute([$_SESSION['id_user'],  $_GET['id'], 0]);
+                            } else if (!empty($alreadyVoted)) {
+                                header('Location: '.$_SERVER[REQUEST_URI].''); 
+                                $deletelike = $bdd->query('DELETE FROM vote WHERE id_user='.$_SESSION['id_user'].' AND id_acteur='.$_GET['id'].'');
+                                exec($deletelike);
+                            }
+                                
+                        } else if (!empty($_POST['dislike']) && isset($_POST['dislike'])) {
+                            if (empty($alreadyVoted)) {
+                                header('Location: '.$_SERVER[REQUEST_URI].'');      
+                                $test = $like->execute([$_SESSION['id_user'], $_GET['id'], 0]);
+                            } else if (!empty($alreadyVoted)) {
+                                header('Location: '.$_SERVER[REQUEST_URI].''); 
+                                $deletelike = $bdd->query('DELETE FROM vote WHERE id_user='.$_SESSION['id_user'].' AND id_acteur='.$_GET['id'].'');
+                                exec($deletelike);
                             }
                         }
+                        
                             
                                
                     ?>

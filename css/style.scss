@@ -149,6 +149,13 @@ footer {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+            &__vote {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-size: 25px;
+                & * {margin: 5px;}
+            }
             &__like {
                 background: url('../media/like.png');
                 background-repeat: no-repeat;

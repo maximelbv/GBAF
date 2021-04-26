@@ -156,6 +156,17 @@ footer a {
   align-items: center;
 }
 
+.acteur_commentaires__header_com__vote {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 25px;
+}
+
+.acteur_commentaires__header_com__vote * {
+  margin: 5px;
+}
+
 .acteur_commentaires__header_com__like {
   background: url("../media/like.png");
   background-repeat: no-repeat;
