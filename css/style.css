@@ -175,6 +175,54 @@ footer a {
   margin-left: 10px;
 }
 
+.acteur_commentaires__commentaires {
+  background: rgba(221, 221, 221, 0.575);
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 18px;
+  color: #2c2c2c;
+}
+
+.acteur_commentaires__nom {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.acteur_commentaires__post {
+  font-size: 16px;
+}
+
+.submit_com {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit_com__area {
+  border: none;
+  background: rgba(221, 221, 221, 0.575);
+  font-family: Poppins;
+  font-size: 16px;
+  width: 100%;
+  height: 200px;
+  padding: 20px;
+}
+
+.submit_com__area:focus {
+  outline: none;
+}
+
+.submit_com__submit {
+  margin-top: 20px;
+  width: 200px;
+  height: 50px;
+  background-image: linear-gradient(to right top, #097ebb, #0983c2, #0988ca, #098dd1, #0992d9);
+  border: none;
+  font-family: Poppins;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
 /* LOG PAGES (INSCRIPTION.PHP / CONNEXION.PHP / CHANGEMENT_MDP.PHP) */
 .log_body {
   height: 975px;
@@ -215,12 +263,12 @@ footer a {
 
 .log_form legend {
   font-size: 25px;
-  padding: 0;
+  padding: 20px 0px 0px 0px;
 }
 
 .log_form div {
   width: 400px;
-  margin: 12px 25px 12px 25px;
+  margin: 12px 0px 12px 25px;
 }
 
 .log_form input {
@@ -229,7 +277,7 @@ footer a {
   font-family: poppins;
   margin-top: 10px;
   border-radius: 5px;
-  padding: 10px;
+  padding: 10px 0px 10px 10px;
   width: 100%;
   height: auto;
   font-size: 14px;
@@ -243,6 +291,7 @@ footer a {
 .log_form input[type=submit] {
   background-image: linear-gradient(to right top, #097ebb, #0983c2, #0988ca, #098dd1, #0992d9);
   color: white;
+  cursor: pointer;
 }
 
 .log_form input[type=reset] {

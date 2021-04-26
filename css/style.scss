@@ -167,8 +167,50 @@ footer {
                 margin-left: 10px;
             }
     }
+    &__commentaires {
+        background: rgba(221, 221, 221, 0.575);
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 18px;
+        color: $txt_color;
+        
+    }
+    &__nom {
+        font-weight: 600;
+        font-size: 25px;
+    }
+    &__post {
+            font-size: 16px;
+        }
 }
 
+.submit_com {
+    display: flex;
+    flex-direction: column;
+    &__area {
+        border: none;
+        background:rgba(221, 221, 221, 0.575);
+        font-family: Poppins;
+        font-size: 16px;
+        width: 100%;
+        height: 200px;
+        padding: 20px;
+        &:focus {
+            outline: none;
+        }
+    }
+    &__submit {
+        margin-top: 20px;
+        width: 200px;
+        height: 50px;
+        background-image: linear-gradient(to right top, #097ebb, #0983c2, #0988ca, #098dd1, #0992d9);
+        border: none;
+        font-family: Poppins;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+    }
+}
 
 /* LOG PAGES (INSCRIPTION.PHP / CONNEXION.PHP / CHANGEMENT_MDP.PHP) */
 
@@ -207,11 +249,11 @@ footer {
     justify-content: center;
     & legend {
         font-size: 25px;
-        padding: 0;
+        padding: 20px 0px 0px 0px;
     }    
     & div {
         width: 400px;
-        margin: 12px 25px 12px 25px;
+        margin: 12px 0px 12px 25px;
     }
     & input {
         background: rgba(221, 221, 221, 0.575);
@@ -219,7 +261,7 @@ footer {
         font-family: poppins;
         margin-top: 10px;
         border-radius: 5px;
-        padding: 10px;
+        padding: 10px 0px 10px 10px;
         width: 100%;
         height: auto;
         font-size: 14px;
@@ -231,6 +273,7 @@ footer {
     & input[type=submit] {
         background-image: linear-gradient(to right top, #097ebb, #0983c2, #0988ca, #098dd1, #0992d9);
         color: white;
+        cursor: pointer;
     }
     & input[type=reset] {
         background: #FF2C2C;
@@ -241,6 +284,7 @@ footer {
         align-self: center;
         color: grey;
         margin: 0;
+        
         & a {
             text-decoration: none;
             color: #2C7DFF;
