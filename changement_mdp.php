@@ -1,18 +1,18 @@
 <?php 
-    include('./include/_bdd_call.php');
+    include('./include/_bdd_call.php'); // appel à la bdd
     
-    if (isset($_POST['pseudo'])) {
-        $isUsername = $bdd->query('SELECT * FROM account WHERE username="'.$_POST["pseudo"].'"')->fetchAll();
+    if (isset($_POST['pseudo'])) { // si le champ pseudo est rempli
+        $isUsername = $bdd->query('SELECT * FROM account WHERE username="'.$_POST["pseudo"].'"')->fetchAll(); // définit $isUsername comme liste des pseudos égaux à la valeur entrée dans le champ pseudo
         
-        if (count($isUsername) != 0) {
-            session_start();    
-            $donnees = $isUsername[0];
-            $_SESSION['id_user'] = $donnees['id_user'];
+        if (count($isUsername) != 0) {                          // si la liste n'est pas vide
+            session_start();                                    // débute la session
+            $donnees = $isUsername[0];                          // $donnees récupère les données de la première entrée de la liste
+            $_SESSION['id_user'] = $donnees['id_user'];         // définition des variables de session depuis $donnees
             $_SESSION['question'] = $donnees['question'];
             $_SESSION['reponse'] = $donnees['reponse'];
-            header('Location: changement_mdp_reponse.php'); 
-        } else {
-            $dontexist = "";
+            header('Location: changement_mdp_reponse.php');     // redirection
+        } else {                                                // sinon
+            $dontexist = "";                                    // définit $dontexist
         }
     }
 ?>
@@ -35,8 +35,8 @@
                     <div><label>Username : <input type="text" name="pseudo" required autocomplete="off"></label></div>
                     <div><input type="submit" value="Valider"></div>
                     <?php
-                        if (isset($_POST['pseudo'])) {
-                            echo $dontexist = "Cet username n'existe pas.";
+                        if (isset($_POST['pseudo'])) {                          // si le champ de pseudo est remplit
+                            echo $dontexist = "Cet username n'existe pas.";     // echo $dontexist et redéfinit sa valeur
                         }
                          
                     ?>

@@ -1,6 +1,6 @@
 <?php 
-    session_start(); 
-    include('./include/_bdd_call.php');    
+    session_start(); // débute la session
+    include('./include/_bdd_call.php'); // appel à la bdd
 ?>
 
 <!DOCTYPE html>
@@ -23,15 +23,15 @@
                     <div><input type="submit"></div>
 
                     <?php
-                        if (!empty($_POST['reponse']) && isset($_POST['reponse']) && !empty($_POST['nv_password']) && isset($_POST['nv_password'])) {
-                            if ($_POST['reponse'] == $_SESSION['reponse']) {
-                                $change = $bdd->prepare('UPDATE account SET password = ? WHERE id_user = ?');
-                                $pass_hash = password_hash($_POST['nv_password'], PASSWORD_DEFAULT);
-                                $change->execute([$pass_hash, $_SESSION['id_user']]);
-                                header('Location: redirection_changement_password.php');
-                                $_SESSION['password'] = $_POST['nv_password'];
-                            } else {
-                                echo "Mauvaise réponse secrète";
+                        if (!empty($_POST['reponse']) && isset($_POST['reponse']) && !empty($_POST['nv_password']) && isset($_POST['nv_password'])) { // si les champs sont remplis
+                            if ($_POST['reponse'] == $_SESSION['reponse']) {                                    // si le mot de passe est bon
+                                $change = $bdd->prepare('UPDATE account SET password = ? WHERE id_user = ?');   // update le password dans la bdd
+                                $pass_hash = password_hash($_POST['nv_password'], PASSWORD_DEFAULT);            // hash le password
+                                $change->execute([$pass_hash, $_SESSION['id_user']]);                           // execute les changements
+                                header('Location: redirection_changement_password.php');                        // redirection
+                                $_SESSION['password'] = $_POST['nv_password'];                                  // redéfinit la variable de session
+                            } else {                                                                            // sinon
+                                echo "Mauvaise réponse secrète";                                                // display une erreur
                             }
                         }
                         

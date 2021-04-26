@@ -1,4 +1,4 @@
-<?php session_start() ?>
+<?php session_start() // débute la session ?> 
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -11,17 +11,18 @@
         
         <?php 
             
-            include('./include/_bdd_call.php');
+            include('./include/_bdd_call.php'); // appel à la bdd
             include("./include/_header.php");
 
-            $reponse = $bdd->prepare('SELECT * FROM acteurs WHERE id_acteur=?');
-            $reponse->execute(array($_GET['id']));
-            $donnees = $reponse->fetch(); 
+            $reponse = $bdd->prepare('SELECT * FROM acteurs WHERE id_acteur=?'); // sélectionne les données de acteur 
+            $reponse->execute(array($_GET['id']));                               // quand l'acteur est égal à l'id de l'URL 
+            $donnees = $reponse->fetch();                                        // stock ses valeurs dans $donnees
         ?> 
 
         <article class="acteur_presentation">
+        <!-- Présentation de l'acteur : ses informations sont générées depuis la base de données avec la variable $donnees définie plus haut -->
 
-            <img class="acteur_presentation__logo" src="<?php echo $donnees['logo'] ?>" alt="">
+            <img class="acteur_presentation__logo" src="<?php echo $donnees['logo'] ?>" alt=""> 
             <h2 class="nom_acteur"><?php echo $donnees['acteur'] ?> </h2>
             <a href="">Lien</a>
             <p> <?php echo $donnees['description'] ?> </p>
@@ -29,7 +30,8 @@
         </article>
                   
         <section class="acteur_commentaires">  
-            
+        <!-- Section des commentaires, elle inclut le header avec le nombre de commentaires et la section likes / dislikes, 
+        ainsi que l'affichage des commentaires et le champ pour créer un nouveau commentaire -->
 
             <div class="acteur_commentaires__header_com">
                 <?php 
