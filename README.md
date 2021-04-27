@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# GBAF
-
-=======
->>>>>>> e3345025b020f0762af3c3980aa9be6d1f399a91
 <h1>GBAF(Groupement Banque Assurance Français)</h1>
 
 <h2>Description</h2>
@@ -29,19 +24,15 @@ This project is the last exercise of my training. It aims to train me in PHP and
 <h3>General</h3>
 
 ✅ HTML5 / CSS3 structure </br>
-⬛ Responsive </br>
+✅ Responsive </br>
 ✅ PHP / SQL for interactions between the site and the database.</br></br>
 
 <h3>Login / Logout</h3>
 
 ✅ Login required to access site information through a UserName and a Password.</br>
-⬛ When the page loads, the UserName and Password fields take the entire width of the screen, between the header and the footer.</br>
+✅ When the page loads, the UserName and Password fields take the entire width of the screen, between the header and the footer.</br>
 ✅ At the first connection, the user can create his account via a page registration.</br>
-<<<<<<< HEAD
 ✅ The user can modify their personal information at any time via the "Account settings" page.</br>
-=======
-⬛ The user can modify their personal information at any time via the "Account settings" page.</br>
->>>>>>> e3345025b020f0762af3c3980aa9be6d1f399a91
 ✅ Required fields on the registration page:</br>
     <ul>
         <li> Name</li>
@@ -51,17 +42,10 @@ This project is the last exercise of my training. It aims to train me in PHP and
         <li> Secret question</li>
         <li> Answer to the secret question</li>
     </ul> </br>
-<<<<<<< HEAD
 ✅ If the user forgets his password, he can enter his UserName and answer the secret question to create a new one.</br>
 ✅ When the user is logged in, his name and first name are indicated in the header on all pages.</br>
 ✅ A button "Disconnect" is present in the header.</br>
 ✅ If the user is logged out, he is automatically redirected to the first page for a new connection via an UserName and a Password..</br></br>
-=======
-⬛ If the user forgets his password, he can enter his UserName and answer the secret question to create a new one.</br>
-✅ When the user is logged in, his name and first name are indicated in the header on all pages.</br>
-⬛ A button "Disconnect" is present in the header.</br>
-⬛ If the user is logged out, he is automatically redirected to the first page for a new connection via an UserName and a Password..</br></br>
->>>>>>> e3345025b020f0762af3c3980aa9be6d1f399a91
 
 <h3>User connected</h3>
 
@@ -75,7 +59,7 @@ This project is the last exercise of my training. It aims to train me in PHP and
         <li> "Show more" button (to open a new page
         for each actor / partner).</li>
     </ul>
-⬛ Details of the partner page including:</br>
+✅ Details of the partner page including:</br>
     <ul>
         <li> logo.</li>
         <li> title</li>
@@ -86,40 +70,6 @@ This project is the last exercise of my training. It aims to train me in PHP and
         <li> list of comments on this actor / partner including the first name of the user who left the comment, the date and the text</li>
     </ul></br>
 
-<h2>Roadmap (sorted chonologically) </h2>
-
-✅ HTML / CSS structure </br>
-✅ actors database</br>
-✅ implementation of the actors data in the index and single actor pages</br>
-✅ Login / register pages creation </br>
-✅ users database </br>
-✅ Register form : create an entry in the database with a password hash.</br>
-✅ Register form : error if username already in use</br>
-✅ Login form : Login if the ids match</br>
-✅ Login form : Redirection to the header with the session started</br>
-<<<<<<< HEAD
-✅ Media queries for the index page</br>
-✅ Styling the login and register pages</br>
-⬛ Register form : REGEX</br>
-✅ Password lost page</br>
-⬛ Styling and add responsive to the single actor page </br>
-✅ Comment section in the single actor pages</br>
-=======
-⬛ Media queries for the index page</br>
-⬛ Register form : REGEX</br>
-⬛ Styling the login and register pages</br>
-⬛ Password lost page</br>
-⬛ Styling and add responsive to the single actor page </br>
-⬛ Comment section in the single actor pages</br>
->>>>>>> e3345025b020f0762af3c3980aa9be6d1f399a91
-⬛ Like section in the single actor pages</br>
-⬛ Securing the forms</br>
-⬛ Securing the url access</br>
-⬛ Legal pages (contact, Legal notice)</br>
-⬛ Foreign key</br></br>
-
-
-
 <h2>Graphical charter</h2></br>
 
 Wireframe and zoning: provided by our web designer.</br>
@@ -129,10 +79,7 @@ Fonts : Poppins</br></br>
 
 <h2>Ressources used</h2> </br>
 
-<<<<<<< HEAD
 Graphics : Adobe Illustrator, Adobe Photoshop</br>
-=======
->>>>>>> e3345025b020f0762af3c3980aa9be6d1f399a91
 Editor : Visual Studio Code </br>
 Server : Apache 2.4.27, WAMP local</br>
 database : phpMyAdmin</br>
@@ -144,15 +91,9 @@ Learning for this project :</br>
 
 <h2>Specifications and support</h2></br>
 
-<<<<<<< HEAD
-⬛ W3C validated</br>
+✅ W3C validated</br>
 ✅ Responsive</br>
 ⬛ Tested on Google Chrome, Firefox, Opera</br>
-=======
-W3C validated</br>
-Responsive</br>
-Tested on Google Chrome, Firefox, Opera</br>
->>>>>>> e3345025b020f0762af3c3980aa9be6d1f399a91
 Most of the lines in the code are commented, if you have a question, contact me at maximelefebvre60230@gmail.com</br>
 
 <h2>Status</h2>
