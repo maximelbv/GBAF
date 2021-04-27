@@ -1,4 +1,9 @@
-<?php session_start() // débute la session ?> 
+<?php 
+session_start();                          // débute la session 
+if (!isset ($_SESSION['username'])) {       // si la variable 'username' de la session n'est pas définie
+    include('include/_redirection.php');    // inclus le code de 'redirection.php' (qui renvoie vers la page de connexion)
+}
+?> 
 
 <!DOCTYPE html>
 <html lang="fr">

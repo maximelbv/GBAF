@@ -2,6 +2,9 @@
     session_start();                      //débute la session
     include('include/_bdd_call.php');     // appel à la bdd
     $liste = null;                        // définit liste comme null (pour éviter une erreur undefined index)
+    if (!isset ($_SESSION['username'])) {       // si la variable 'username' de la session n'est pas définie
+        include('include/_redirection.php');    // inclus le code de 'redirection.php' (qui renvoie vers la page de connexion)
+    }
 ?>
 
 <!DOCTYPE html>
