@@ -19,7 +19,7 @@
                     <legend>Changer son mot de passe</legend>
                     <div><p class="log_form__btn_changemenu"><a href="connexion.php">Revenir à la connexion</a></p></div>
                     <div><label><?php echo $_SESSION['question'] ?> <input type="text" name="reponse" required autocomplete="off"></label></div>
-                    <div><label>Nouveau mot de passe : <input type="password" name="nv_password" required autocomplete="off" ></label></div>
+                    <div><label>Nouveau mot de passe : <input type="password" name="nv_password" required autocomplete="off" minlength="4" maxlength="20"></label></div>
                     <div><input type="submit"></div>
 
                     <?php

@@ -24,10 +24,10 @@
 
                 <legend>Mon Compte</legend>
                     
-                <div><label>Changer son prénom : <input type="text" name="nv_prenom" autocomplete="off" placeholder ="<?php echo $_SESSION['prenom'] ?>"></label></div>
-                <div><label>Changer son nom : <input type="text" name="nv_nom" autocomplete="off" placeholder ="<?php echo $_SESSION['nom'] ?>"></label></div>
-                <div><label>Changer son username : <input type="text" name="nv_username" autocomplete="off" placeholder ="<?php echo $_SESSION['username'] ?>"></label></div>
-                <div><label>Changer son mot de passe : <input type="password" autocomplete="off" name="nv_password"></label></div>
+                <div><label>Changer son prénom : <input type="text" name="nv_prenom" autocomplete="off" placeholder ="<?php echo $_SESSION['prenom'] ?>" minlength="3" maxlength="20"></label></div>
+                <div><label>Changer son nom : <input type="text" name="nv_nom" autocomplete="off" placeholder ="<?php echo $_SESSION['nom'] ?>" minlength="3" maxlength="20"></label></div>
+                <div><label>Changer son username : <input type="text" name="nv_username" autocomplete="off" placeholder ="<?php echo $_SESSION['username'] ?>" minlength="4" maxlength="20"></label></div>
+                <div><label>Changer son mot de passe : <input type="password" autocomplete="off" name="nv_password" minlength="4" maxlength="20"></label></div>
                 <div><label>Changer sa question secrète : <input type="text" name="nv_question" autocomplete="off" placeholder ="<?php echo $_SESSION['question'] ?>"></label></div>
                 <div><label>Changer sa réponse secrète : <input type="text" name="nv_reponse" autocomplete="off"></label></div>
                 <div><input type="submit" value="Envoyer"></div>

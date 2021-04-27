@@ -18,13 +18,13 @@
 
                     <div><p class="log_form__btn_changemenu">Déjà membre ? <a href="connexion.php">Se connecter</a></p></div>
                 
-                    <div> <label>Nom : <input type="text" name="nom" required autocomplete="off" placeholder="Doe"></label> </div>
+                    <div> <label>Nom : <input type="text" name="nom" required autocomplete="off" placeholder="Doe" minlength="3" maxlength="20"></label> </div>
 
-                    <div> <label>Prénom : <input type="text" name="prenom" required autocomplete="off" placeholder="John"></label> </div>
+                    <div> <label>Prénom : <input type="text" name="prenom" required autocomplete="off" placeholder="John" minlength="3" maxlength="20"></label> </div>
 
-                    <div> <label>User Name : <input type="text" name="username" required autocomplete="off"></label> </div>
+                    <div> <label>User Name : <input type="text" name="username" required autocomplete="off" minlength="4" maxlength="20"></label> </div>
 
-                    <div> <label>Mot de passe : <input type="password" name="password" required autocomplete="off"></label> </div>
+                    <div> <label>Mot de passe : <input type="password" name="password" required autocomplete="off" minlength="4" maxlength="20"></label> </div>
 
                     <div><label>Question secrète : <input type="text" name="question_secrete" required autocomplete="off"></label></div>
 
