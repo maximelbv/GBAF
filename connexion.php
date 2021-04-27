@@ -1,28 +1,28 @@
  <?php 
 
-    include('./include/_bdd_call.php'); // appel à la bdd 
+    include('./include/_bdd_call.php');                                                   // appel à la bdd 
 
     if (isset($_POST['pseudo'],$_POST['mdp'])) { 
 
         $reponse = $bdd->query('SELECT * FROM account WHERE username="'.$_POST["pseudo"].'"')->fetchAll(); 
 
-        if (array_key_exists(0, $reponse)) { // si le pseudo existe dans la bdd
+        if (array_key_exists(0, $reponse)) {                                               // si le pseudo existe dans la bdd
 
-            $donnees = $reponse[0]; // stock ses valeurs dans $donnees
-            $isPasswordCorrect = password_verify($_POST['mdp'], $donnees['password']); // vérifie le mot de passe
+            $donnees = $reponse[0];                                                        // stock ses valeurs dans $donnees
+            $isPasswordCorrect = password_verify($_POST['mdp'], $donnees['password']);     // vérifie le mot de passe
 
-            if ($_POST['pseudo'] == $donnees['username'] && $isPasswordCorrect) { // si l'username et le mdp sont corrects
+            if ($_POST['pseudo'] == $donnees['username'] && $isPasswordCorrect) {          // si l'username et le mdp sont corrects
 
-                session_start();                                                  // débute la session                 
-                $_SESSION['username'] = $donnees['username'];                     // définit les variables de session
+                session_start();                                                           // débute la session                 
+                $_SESSION['username'] = $donnees['username'];                              // définit les variables de session
                 $_SESSION['prenom'] = $donnees['prenom'];
                 $_SESSION['nom'] = $donnees['nom']; 
                 $_SESSION['id_user'] = $donnees['id_user'];      
                 $_SESSION['question'] = $donnees['question'];
                 $_SESSION['reponse'] = $donnees['reponse'];                                       
-                header('LOCATION: index.php');                                    // va à l'index                        
-            } else {                                                              // sinon
-                $mauvaisid =  "mauvais identifiant ou mot de passe";              // donne la valeur de $mauvaisid
+                header('LOCATION: index.php');                                             // va à l'index                        
+            } else {                                                                       // sinon
+                $mauvaisid =  "mauvais identifiant ou mot de passe";                       // donne la valeur de $mauvaisid
             }
         } else { 
             $mauvaisid =  "mauvais identifiant ou mot de passe"; 
@@ -41,7 +41,7 @@
 
     <body class="log_body">
 
-        <!-- HTML FORMULAIRE DE CONNEXION -->
+        <!-- FORMULAIRE DE CONNEXION -->
 
             <form action="connexion.php" method="post">
 

@@ -1,7 +1,7 @@
 <?php 
-    include('./include/_bdd_call.php'); // appel à la bdd
+    include('./include/_bdd_call.php');                         // appel à la bdd
     
-    if (isset($_POST['pseudo'])) { // si le champ pseudo est rempli
+    if (isset($_POST['pseudo'])) {                              // si le champ pseudo est rempli
         $isUsername = $bdd->query('SELECT * FROM account WHERE username="'.$_POST["pseudo"].'"')->fetchAll(); // définit $isUsername comme liste des pseudos égaux à la valeur entrée dans le champ pseudo
         
         if (count($isUsername) != 0) {                          // si la liste n'est pas vide

@@ -1,7 +1,7 @@
 <?php 
-    session_start(); //débute la session
-    include('include/_bdd_call.php'); // appel à la bdd
-    $liste = null;  // définit liste comme null (pour éviter une erreur undefined index)
+    session_start();                      //débute la session
+    include('include/_bdd_call.php');     // appel à la bdd
+    $liste = null;                        // définit liste comme null (pour éviter une erreur undefined index)
 ?>
 
 <!DOCTYPE html>

@@ -1,6 +1,6 @@
 <?php 
-    session_start(); // débute la session
-    include('./include/_bdd_call.php'); // appel à la bdd
+    session_start();                     // débute la session
+    include('./include/_bdd_call.php');  // appel à la bdd
 ?>
 
 <!DOCTYPE html>

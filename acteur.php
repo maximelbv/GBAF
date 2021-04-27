@@ -19,8 +19,9 @@
             $donnees = $reponse->fetch();                                        // stock ses valeurs dans $donnees
         ?> 
 
-        <article class="acteur_presentation">
         <!-- Présentation de l'acteur -->
+        <article class="acteur_presentation">
+        
 
             <img class="acteur_presentation__logo" src="<?php echo $donnees['logo'] ?>" alt=""> 
             <h2 class="nom_acteur"><?php echo $donnees['acteur'] ?> </h2>
@@ -28,16 +29,16 @@
             <p> <?php echo $donnees['description'] ?> </p>
 
         </article>
-                  
+
+        <!-- Section des commentaires -->          
         <section class="acteur_commentaires">  
-        <!-- Section des commentaires, elle inclut le header avec le nombre de commentaires et la section likes / dislikes, 
-        ainsi que l'affichage des commentaires et le champ pour créer un nouveau commentaire -->
+        
 
             <div class="acteur_commentaires__header">
                 <?php 
 
                 $nb_post = $bdd->query('SELECT post FROM post WHERE id_acteur = '.$_GET['id'].'')->fetchAll(); // stock la liste des posts relatif à l'acteur ?> 
-                <h1><?php echo count($nb_post) ?> Commentaires</h1> <!-- affiche le nombre de posts -->
+                <h1><?php echo count($nb_post) ?> Commentaires</h1>
 
                 
 
@@ -48,10 +49,9 @@
                         $countDislikes = $bdd->query('SELECT vote FROM vote WHERE vote = 0 AND id_acteur = '.$_GET['id'].'')->fetchAll(); // stock la liste des votes où le vote est false et où l'acteur est égal à l'acteur où je suis 
                     ?>
                     <input type="submit" class="acteur_commentaires__header__like" name="like" value=" ">
-                    <p><?php echo count($countLikes) ?></p> <!-- affiche le nombre de likes -->
+                    <p><?php echo count($countLikes) ?></p>
                     <input type="submit" class="acteur_commentaires__header__dislike" name="dislike" value=" ">
-                    <p><?php echo count($countDislikes) ?></p> <!-- affiche le nombre de dislikes -->
-                </form>
+                    <p><?php echo count($countDislikes) ?></p>
 
                     <?php
                         
