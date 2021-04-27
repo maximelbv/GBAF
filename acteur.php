@@ -24,7 +24,7 @@
 
             <img class="acteur_presentation__logo" src="<?php echo $donnees['logo'] ?>" alt=""> 
             <h2 class="nom_acteur"><?php echo $donnees['acteur'] ?> </h2>
-            <a href="">Lien</a>
+            <a href="exemple">Lien vers le site</a>
             <p> <?php echo $donnees['description'] ?> </p>
 
         </article>
