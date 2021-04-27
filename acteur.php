@@ -7,7 +7,7 @@
         <title>GBAF - Acteur <?php echo $_GET['id'] ?></title>       
     </head>
 
-    <body>
+    <body class="body_acteur">
         
         <?php 
             
@@ -33,7 +33,7 @@
         <!-- Section des commentaires, elle inclut le header avec le nombre de commentaires et la section likes / dislikes, 
         ainsi que l'affichage des commentaires et le champ pour créer un nouveau commentaire -->
 
-            <div class="acteur_commentaires__header_com">
+            <div class="acteur_commentaires__header">
                 <?php 
 
                 $nb_post = $bdd->query('SELECT post FROM post WHERE id_acteur = '.$_GET['id'].'')->fetchAll(); // stock la liste des posts relatif à l'acteur ?> 
@@ -41,15 +41,15 @@
 
                 
 
-                <form class="acteur_commentaires__header_com__vote" method="post">
+                <form class="acteur_commentaires__header__vote" method="post">
                 <a class="acteur_commentaires__btn_com" href="#txt_area">Nouveau Commentaire</a>
                     <?php 
                         $countLikes = $bdd->query('SELECT vote FROM vote WHERE vote = 1 AND id_acteur = '.$_GET['id'].'')->fetchAll(); // stock la liste des votes où le vote est true et où l'acteur est égal à l'acteur où je suis 
                         $countDislikes = $bdd->query('SELECT vote FROM vote WHERE vote = 0 AND id_acteur = '.$_GET['id'].'')->fetchAll(); // stock la liste des votes où le vote est false et où l'acteur est égal à l'acteur où je suis 
                     ?>
-                    <input type="submit" class="acteur_commentaires__header_com__like" name="like" value=" ">
+                    <input type="submit" class="acteur_commentaires__header__like" name="like" value=" ">
                     <p><?php echo count($countLikes) ?></p> <!-- affiche le nombre de likes -->
-                    <input type="submit" class="acteur_commentaires__header_com__dislike" name="dislike" value=" ">
+                    <input type="submit" class="acteur_commentaires__header__dislike" name="dislike" value=" ">
                     <p><?php echo count($countDislikes) ?></p> <!-- affiche le nombre de dislikes -->
                 </form>
 

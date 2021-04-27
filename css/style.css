@@ -149,25 +149,25 @@ footer a {
   padding: 0px 100px 100px 100px;
 }
 
-.acteur_commentaires__header_com {
+.acteur_commentaires__header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.acteur_commentaires__header_com__vote {
+.acteur_commentaires__header__vote {
   display: flex;
   flex-direction: row;
   align-items: center;
   font-size: 25px;
 }
 
-.acteur_commentaires__header_com__vote * {
+.acteur_commentaires__header__vote * {
   margin: 5px;
 }
 
-.acteur_commentaires__header_com__like {
+.acteur_commentaires__header__like {
   background: url("../media/like.png");
   background-repeat: no-repeat;
   background-position: 50%;
@@ -176,7 +176,7 @@ footer a {
   border: none;
 }
 
-.acteur_commentaires__header_com__dislike {
+.acteur_commentaires__header__dislike {
   background: url("../media/dislike.png");
   background-repeat: no-repeat;
   background-position: 50%;

@@ -1,12 +1,21 @@
 @media screen and (min-width: 0px) and (max-width: 725px) {
     
+    .header {
+        width: 90% auto;
+        &__logo_gbaf {
+            margin-left: auto;
+        }
+    }
+
     .log_body__illustration {
         display: none;
     }
-
-    .index_acteurs__liste__elem__informations {
-        flex-direction: column;
-        & img {margin: 0px;}
+    .index_acteurs__liste__elem {
+        margin: 10px;
+        &__informations {
+            flex-direction: column;
+            & img {margin: 0px;}
+        }
     }
 
     .acteur_presentation__logo {
@@ -39,5 +48,32 @@
     }
     .body_compte {
         background: none;
+    }
+    .body_acteur {
+        margin: 0px auto;
+    }
+    .acteur_presentation {
+        padding: 2%;
+    }
+    .acteur_commentaires {
+        padding: 0px;
+        align-items: center;
+        justify-self: center;
+        &__header {
+            flex-direction: column;
+            align-items: center;
+            &__vote {
+                justify-content: center;
+                margin: 0px 10% 0px 10%;
+            }
+        }
+    }
+
+    .submit_com {
+        align-items: center;
+        &__area {
+            width: 90%
+        }
+        &__submit {margin-bottom: 20px;}
     }
 }
