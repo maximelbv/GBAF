@@ -144,6 +144,8 @@ footer {
     }
 }
 
+
+
 .acteur_commentaires {
     padding: 0px 100px 100px 100px;
     &__header {
@@ -204,6 +206,7 @@ footer {
         text-decoration: none;
         justify-self: flex-end;
     }
+    &__txtArea {border: none;}
 }
 
 .submit_com {
@@ -272,6 +275,7 @@ footer {
     & legend {
         font-size: 25px;
         padding: 20px 0px 0px 0px;
+        margin: 20px auto;
     }    
     & div {
         width: 400px;

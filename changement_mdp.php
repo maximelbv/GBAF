@@ -31,7 +31,7 @@
 
                 <fieldset class="log_form">
 
-                    <div><legend>Changer son mot de passe</legend></div>
+                    <legend>Changer son mot de passe</legend>
                     <div><p class="log_form__btn_changemenu"><a href="connexion.php">Revenir à la connexion</a></p></div>
                     <div><label>Username : <input type="text" name="pseudo" required autocomplete="off"></label></div>
                     <div><input type="submit" value="Valider"></div>

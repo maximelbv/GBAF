@@ -47,7 +47,7 @@
 
                 <fieldset class="log_form">
 
-                    <div><legend>Connexion</legend></div>
+                    <legend>Connexion</legend>
                     <div><p class="log_form__btn_changemenu">Pas de compte ? <a href="inscription.php">Créer un compte</a></p></div>                  
                     <div><label>User name : <input type="text" name="pseudo"  required autocomplete="off"></label></div>    
                     <div><label>Mot de passe : <input type="password" name="mdp" required autocomplete="off"></label></div>

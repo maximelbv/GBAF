@@ -14,7 +14,7 @@
 
                 <fieldset class="log_form">
 
-                    <div><legend>Inscription</legend></div>
+                    <legend>Inscription</legend>
 
                     <div><p class="log_form__btn_changemenu">Déjà membre ? <a href="connexion.php">Se connecter</a></p></div>
                 
@@ -26,7 +26,7 @@
 
                     <div> <label>Mot de passe : <input type="password" name="password" required autocomplete="off"></label> </div>
 
-                    <div><label>Question secrète : <input type="text" name="question_secrete" required autocomplete="off"></input></label></div>
+                    <div><label>Question secrète : <input type="text" name="question_secrete" required autocomplete="off"></label></div>
 
                     <div> <label>Réponse à la question secrète : <input type="text" name="reponse_secrete" required autocomplete="off"></label> </div>
 

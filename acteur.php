@@ -48,7 +48,7 @@ if (!isset ($_SESSION['username'])) {       // si la variable 'username' de la s
                 
 
                 <form class="acteur_commentaires__header__vote" method="post">
-                <a class="acteur_commentaires__btn_com" href="#txt_area">Nouveau Commentaire</a>
+                    <a class="acteur_commentaires__btn_com" href="#txt_area">Nouveau Commentaire</a>
                     <?php 
                         $countLikes = $bdd->query('SELECT vote FROM vote WHERE vote = 1 AND id_acteur = '.$_GET['id'].'')->fetchAll(); // stock la liste des votes où le vote est true et où l'acteur est égal à l'acteur où je suis 
                         $countDislikes = $bdd->query('SELECT vote FROM vote WHERE vote = 0 AND id_acteur = '.$_GET['id'].'')->fetchAll(); // stock la liste des votes où le vote est false et où l'acteur est égal à l'acteur où je suis 
@@ -91,6 +91,7 @@ if (!isset ($_SESSION['username'])) {       // si la variable 'username' de la s
                             
                                
                     ?>
+                </form>
                
             </div>
 
@@ -124,9 +125,11 @@ if (!isset ($_SESSION['username'])) {       // si la variable 'username' de la s
             </div>
 
             <form method="post" class="submit_com">
-                <legend>Ecrire un commentaire :</legend>
-                <textarea name="commentaire" class="submit_com__area" id="txt_area" autocomplete="off"></textarea>
-                <input type="submit" class="submit_com__submit ">
+                <fieldset class="acteur_commentaires__txtArea">
+                    <legend>Ecrire un commentaire :</legend>
+                    <textarea name="commentaire" class="submit_com__area" id="txt_area" autocomplete="off"></textarea>
+                    <input type="submit" class="submit_com__submit ">
+                </fieldset>
                 
             </form>
 

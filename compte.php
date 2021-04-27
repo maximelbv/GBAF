@@ -22,7 +22,7 @@
 
             <fieldset class="log_form">
 
-                <div><legend>Mon Compte</legend></div>
+                <legend>Mon Compte</legend>
                     
                 <div><label>Changer son prénom : <input type="text" name="nv_prenom" autocomplete="off" placeholder ="<?php echo $_SESSION['prenom'] ?>"></label></div>
                 <div><label>Changer son nom : <input type="text" name="nv_nom" autocomplete="off" placeholder ="<?php echo $_SESSION['nom'] ?>"></label></div>
