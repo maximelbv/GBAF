@@ -20,7 +20,7 @@
         ?> 
 
         <article class="acteur_presentation">
-        <!-- Présentation de l'acteur : ses informations sont générées depuis la base de données avec la variable $donnees définie plus haut -->
+        <!-- Présentation de l'acteur -->
 
             <img class="acteur_presentation__logo" src="<?php echo $donnees['logo'] ?>" alt=""> 
             <h2 class="nom_acteur"><?php echo $donnees['acteur'] ?> </h2>
@@ -105,7 +105,7 @@
 
                         if ($liste['id_acteur'] == $_GET['id']) {   // si l'id_acteur de post est égal a l'acteur affiché
 
-                            ?><div class="acteur_commentaires__commentaires"><div class="acteur_commentaires__nom"><?php echo $liste['prenom'] . " " . $liste['nom'] ?> </div><br><div class="acteur_commentaires__post"><?php echo $liste['post']; ?></div><br> <?php echo $liste ['date_add'] ?> </div> <br><br><?php
+                            ?><div class="acteur_commentaires__commentaires"><div class="acteur_commentaires__nom"><?php echo $liste['prenom'] . " " . $liste['nom'] ?> </div><br><div class="acteur_commentaires__post"><?php echo $liste['post']; ?></div><br> <?php echo "le " .date( "d m Y à h:m", strtotime($liste ['date_add'])) ?> </div> <br><br><?php
                             // affiche les commentaires
                         }
                
@@ -117,7 +117,7 @@
 
             <form method="post" class="submit_com">
                 <legend>Ecrire un commentaire :</legend>
-                <textarea name="commentaire" class="submit_com__area"autocomplete="off" cols="30" rows="10"></textarea>
+                <textarea name="commentaire" class="submit_com__area" autocomplete="off"></textarea>
                 <input type="submit" class="submit_com__submit ">
                 
             </form>
