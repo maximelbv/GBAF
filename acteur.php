@@ -39,7 +39,10 @@
                 $nb_post = $bdd->query('SELECT post FROM post WHERE id_acteur = '.$_GET['id'].'')->fetchAll(); // stock la liste des posts relatif à l'acteur ?> 
                 <h1><?php echo count($nb_post) ?> Commentaires</h1> <!-- affiche le nombre de posts -->
 
+                
+
                 <form class="acteur_commentaires__header_com__vote" method="post">
+                <a class="acteur_commentaires__btn_com" href="#txt_area">Nouveau Commentaire</a>
                     <?php 
                         $countLikes = $bdd->query('SELECT vote FROM vote WHERE vote = 1 AND id_acteur = '.$_GET['id'].'')->fetchAll(); // stock la liste des votes où le vote est true et où l'acteur est égal à l'acteur où je suis 
                         $countDislikes = $bdd->query('SELECT vote FROM vote WHERE vote = 0 AND id_acteur = '.$_GET['id'].'')->fetchAll(); // stock la liste des votes où le vote est false et où l'acteur est égal à l'acteur où je suis 
@@ -78,7 +81,7 @@
                                 $deletelike = $bdd->query('DELETE FROM vote WHERE id_user='.$_SESSION['id_user'].' AND id_acteur='.$_GET['id'].'');
                                 exec($deletelike);                                                              // supprime le like
                             }
-                        }
+                        } 
                         
                             
                                
@@ -117,7 +120,7 @@
 
             <form method="post" class="submit_com">
                 <legend>Ecrire un commentaire :</legend>
-                <textarea name="commentaire" class="submit_com__area" autocomplete="off"></textarea>
+                <textarea name="commentaire" class="submit_com__area" id="txt_area" autocomplete="off"></textarea>
                 <input type="submit" class="submit_com__submit ">
                 
             </form>

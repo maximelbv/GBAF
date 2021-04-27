@@ -203,6 +203,20 @@ footer a {
   font-size: 16px;
 }
 
+.acteur_commentaires__btn_com {
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  background: #ff2c2c;
+  font-size: 15px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  justify-self: flex-end;
+}
+
 .submit_com {
   display: flex;
   flex-direction: column;
