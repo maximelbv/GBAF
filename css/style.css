@@ -12,22 +12,14 @@ body {
 
 .header {
   display: flex;
-  flex-direction: row;
-  height: 100px;
-  width: 100%;
-}
-
-.header__logo_gbaf {
-  margin: 17px 0px 0px 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .header__compte {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
-  width: 100%;
-  padding-right: 20px;
 }
 
 .header__compte * {
@@ -39,26 +31,21 @@ body {
   width: 25px;
   height: 25px;
   background-image: url("../media/logout.png");
-  background-position: center;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 footer {
-  width: 100%;
   height: 100px;
   background: #2c2c2c;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-footer p {
-  margin: 0px 10px 0px 10px;
-  color: #dfdfdf;
-}
-
 footer a {
+  margin: 0px 10px;
+  color: #dfdfdf;
   text-decoration: none;
 }
 
@@ -68,32 +55,21 @@ footer a {
   justify-content: center;
   padding: 2% 4% 2% 4%;
   text-align: center;
-  font-size: 12px;
   color: #2c2c2c;
 }
 
-.index_presentation__txt {
-  font-size: large;
-  align-self: center;
-}
-
-.index_presentation__txt p {
-  margin: 50px 0px 50px 0px;
-  width: auto;
-  font-size: 16px;
+.index_presentation p {
+  margin: 50px 0px;
 }
 
 .index_acteurs__txt {
   padding-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
 }
 
 .index_acteurs__txt__btn {
   width: 35px;
-  background: red;
+  background: #ff2c2c;
   border-radius: 50px;
 }
 
@@ -106,15 +82,12 @@ footer a {
   flex-direction: column;
   align-items: center;
   box-shadow: -7px 7px 25px 0px rgba(128, 128, 128, 0.418);
-  height: auto;
-  margin: 50px;
+  margin: 50px 20px;
 }
 
 .index_acteurs__liste__elem__informations {
   width: 95%;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
 }
 
 .index_acteurs__liste__elem__informations img {
@@ -122,7 +95,6 @@ footer a {
   align-self: center;
   justify-self: center;
   width: 200px;
-  height: auto;
 }
 
 .index_acteurs__liste__elem__btn_suite {
@@ -132,7 +104,7 @@ footer a {
   text-decoration: none;
   color: white;
   padding: 10px 20px 10px 20px;
-  background: red;
+  background: #ff2c2c;
   border-radius: 20px;
 }
 
@@ -153,14 +125,12 @@ footer a {
 
 .acteur_commentaires__header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
 .acteur_commentaires__header__vote {
   display: flex;
-  flex-direction: row;
   align-items: center;
   font-size: 25px;
 }
@@ -327,7 +297,7 @@ footer a {
 }
 
 .log_form input[type=reset] {
-  background: #FF2C2C;
+  background: #ff2c2c;
   color: white;
 }
 
