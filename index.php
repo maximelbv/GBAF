@@ -37,7 +37,7 @@
 
             </div>
 
-            <img src="media/teamwork.png" alt="">
+            <img src="media/teamwork.png" alt="Travail d'équipe">
               
         </section>
 
@@ -47,7 +47,7 @@
             <div class="index_acteurs__txt">
 
                 <h2> Découvrez les acteurs et pârtenaires du GBAF </h2>
-                <img class="index_acteurs__txt__btn" src="media/arrow.png" alt="">
+                <img class="index_acteurs__txt__btn" src="media/arrow.png" alt="flèche">
 
             </div>
 
@@ -62,7 +62,7 @@
                             
                     <div class="index_acteurs__liste__elem__informations">
 
-                         <img src="<?php echo $donnees['logo'] ?>" alt=""> 
+                         <img src="<?php echo $donnees['logo'] ?>" alt="logo"> 
 
                         <div class='nomDesc'> 
 

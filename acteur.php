@@ -28,7 +28,7 @@ if (!isset ($_SESSION['username'])) {       // si la variable 'username' de la s
         <article class="acteur_presentation">
         
 
-            <img class="acteur_presentation__logo" src="<?php echo $donnees['logo'] ?>" alt=""> 
+            <img class="acteur_presentation__logo" src="<?php echo $donnees['logo'] ?>" alt="logo"> 
             <h2 class="nom_acteur"><?php echo $donnees['acteur'] ?> </h2>
             <a href="exemple">Lien vers le site</a>
             <p> <?php echo $donnees['description'] ?> </p>

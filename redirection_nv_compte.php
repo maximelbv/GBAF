@@ -6,10 +6,10 @@
     </head>
 
     <body class="body_redirection">
-        <img src="media/check.png" alt="" width="100px">
+        <img src="media/check.png" alt="validé" width="100px">
         <h1>Succès !</h1>
         <h2>Votre compte été créé <br>vous allez être redirigé vers la page de connexion.</h2>
-        <img src="media/loading.gif" alt="" width="150px" height="150px">
+        <img src="media/loading.gif" alt="chargement" width="150px" height="150px">
         <?php
             header("Refresh:2; url=http://localhost/Formation/GBAF/connexion.php");
         ?>

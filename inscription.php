@@ -53,7 +53,7 @@
                                     header('Location: redirection_nv_compte.php'); // redirection 
                             } else { ?>   
                                 <div class="log_form__error">
-                                    <img src="media/error.png" alt="" width="15" height="15"> 
+                                    <img src="media/error.png" alt="erreur" width="15" height="15"> 
                                     <p>identifiant déjà utilisé</p> 
                                 </div>
                         <?php }

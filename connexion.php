@@ -56,7 +56,7 @@
                     <div class="log_form__error_reverse">                                                                                                     
                         <?php 
                             if (isset($mauvaisid)) {    // si $mauvaisid est définie
-                                echo $mauvaisid ?> <img src="media/error.png" alt="" width="15" height="15"> <?php  // display $mauvaisid
+                                echo $mauvaisid ?> <img src="media/error.png" alt="erreur" width="15" height="15"> <?php  // display $mauvaisid
                             }     
                         ?>
                     </div> 
