@@ -90,8 +90,8 @@
             </ul>
 
         </section>
-        
-        <?php include("./include/_footer.php"); ?>      <!-- Inclut le footer -->
+
+        <?php include("./include/_footer.php"); ?>      
         
     </body>
     

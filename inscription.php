@@ -32,7 +32,7 @@
 
                     <div>
                         <input type="submit" value="Créer mon compte">
-                        <input type="reset" value="Annuler">  
+                        <input type="reset" value="Remettre à zéro">  
                     </div> 
                     
                     <?php

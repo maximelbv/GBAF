@@ -86,9 +86,7 @@ if (!isset ($_SESSION['username'])) {       // si la variable 'username' de la s
                                 $deletelike = $bdd->query('DELETE FROM vote WHERE id_user='.$_SESSION['id_user'].' AND id_acteur='.$_GET['id'].'');
                                 exec($deletelike);                                                              // supprime le like
                             }
-                        } 
-                        
-                            
+                        }   
                                
                     ?>
                 </form>
@@ -114,7 +112,7 @@ if (!isset ($_SESSION['username'])) {       // si la variable 'username' de la s
 
                         if ($liste['id_acteur'] == $_GET['id']) {   // si l'id_acteur de post est égal a l'acteur affiché
 
-                            ?><div class="acteur_commentaires__commentaires"><div class="acteur_commentaires__nom"><?php echo $liste['prenom'] . " " . $liste['nom'] ?> </div><br><div class="acteur_commentaires__post"><?php echo $liste['post']; ?></div><br> <?php echo "le " .date( "d m Y à h:m", strtotime($liste ['date_add'])) ?> </div> <br><br><?php
+                            ?><div class="acteur_commentaires__commentaires"><div class="acteur_commentaires__nom"><?php echo $liste['prenom'] . " " . $liste['nom'] ?> </div><br><div class="acteur_commentaires__post"><?php echo $liste['post']; ?></div><br> <?php echo "le " .date( "d m Y à H:m", strtotime($liste ['date_add'])) ?> </div> <br><br><?php
                             // affiche les commentaires
                         }
                
