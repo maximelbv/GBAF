@@ -8,7 +8,7 @@
     <h1>Succès !</h1>
     <h2>Votre compte été créé <br>vous allez être redirigé vers la page de connexion.</h2>
     <?php
-        header("Refresh:3; url=http://localhost/Formation/GBAF/connexion.php");
+        header("Refresh:3; url=http://local/Formation/GBAF/connexion.php");
     ?>
 </body>
 </html>

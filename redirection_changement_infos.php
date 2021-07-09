@@ -11,7 +11,7 @@
         <h2>Vos informations ont bien été modifiées.</h2>
         <img src="media/loading.gif" alt="chargement" width="150px" height="150px">
         <?php
-            header("Refresh:2; url=http://localhost/Formation/GBAF/compte.php");
+            header("Refresh:2; url=http://local/Formation/GBAF/compte.php");
         ?>
     </body>
 </html>

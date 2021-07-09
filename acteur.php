@@ -1,8 +1,8 @@
 <?php 
-session_start();                          // débute la session 
-if (!isset ($_SESSION['username'])) {       // si la variable 'username' de la session n'est pas définie
-    include('include/_redirection.php');    // inclus le code de 'redirection.php' (qui renvoie vers la page de connexion)
-}
+    session_start();                            // débute la session 
+    if (!isset ($_SESSION['username'])) {       // si la variable 'username' de la session n'est pas définie
+        include('include/_redirection.php');    // inclus le code de 'redirection.php' (qui renvoie vers la page de connexion)
+    }
 ?> 
 
 <!DOCTYPE html>
@@ -94,7 +94,8 @@ if (!isset ($_SESSION['username'])) {       // si la variable 'username' de la s
             </div>
 
             <?php
-                if (isset($_POST['commentaire']) && !empty($_POST['commentaire'])) {                        // si le champ commentaire est rempli
+                $alreadyCommented = $bdd->query('SELECT id_user FROM post WHERE EXISTS(SELECT id_user FROM post WHERE id_user = "'.$_SESSION['id_user'].'")')->fetchAll();
+                if (isset($_POST['commentaire']) && !empty($_POST['commentaire']) && empty($alreadyCommented)) {                        // si le champ commentaire est rempli
 
                     $create = $bdd->prepare('INSERT INTO post(post, id_user,id_acteur) VALUES(?,?,?)');     // prepare un insert
                     $create->execute(array($_POST['commentaire'], $_SESSION['id_user'],$_GET['id']));       // insert dans la bdd le commentaire avec l'id de l'utilisateur et de l'acteur

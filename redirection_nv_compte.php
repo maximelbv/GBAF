@@ -11,7 +11,7 @@
         <h2>Votre compte été créé <br>vous allez être redirigé vers la page de connexion.</h2>
         <img src="media/loading.gif" alt="chargement" width="150px" height="150px">
         <?php
-            header("Refresh:2; url=http://localhost/Formation/GBAF/connexion.php");
+            header("Refresh:2; url=http://local/Formation/GBAF/connexion.php");
         ?>
     </body>
 </html>

@@ -226,7 +226,7 @@ footer a {
 
 /* LOG PAGES (INSCRIPTION.PHP / CONNEXION.PHP / CHANGEMENT_MDP.PHP) */
 .log_body {
-  height: 975px;
+  height: 1007px;
   width: 100%;
   background: white;
   display: flex;
@@ -248,7 +248,7 @@ footer a {
 
 .log_body__illustration__isometric2 {
   position: fixed;
-  margin: 50px 40px 0px 60px;
+  margin: 40px 40px 0px 60px;
 }
 
 .log_form {
